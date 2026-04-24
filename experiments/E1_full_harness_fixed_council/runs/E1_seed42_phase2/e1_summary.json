@@ -1,0 +1,21 @@
+{
+  "run_seed": 42,
+  "target": "cauchy_A",
+  "data_csv": "data/extended/tier2_binary.csv",
+  "best_formula": "exp(exp((((x2 / exp(cbrt(x2 - 9.932189))) / x0) - x4) + -0.49596766) + -0.06790383)",
+  "train_rmse": 0.5355530505934963,
+  "test_rmse": 0.5722499957043901,
+  "r2": 0.5934400269875642,
+  "complexity": 17,
+  "rounds_used": 5,
+  "physics_valid": true,
+  "n_train": 154,
+  "n_test": 39,
+  "features_used": [
+    "atomic_number_M",
+    "Z_ratio",
+    "d_electron_count",
+    "atomic_number_X",
+    "bond_polarity"
+  ]
+}

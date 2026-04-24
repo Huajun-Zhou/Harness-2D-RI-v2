@@ -87,9 +87,10 @@ def _default_run_id() -> str:
 def _dispatch(experiment: str, config_path: Path, run_seed: int,
               run_dir: Path) -> dict:
     """Route to the experiment-specific runner. Phase 2 fills these in."""
-    # Intentional early-fail skeleton. Each branch will be replaced by:
-    #     from src.v2.runners import E1_full_harness
-    #     return E1_full_harness.run(config_path, run_seed, run_dir)
+    if experiment == "E1_full_harness_fixed_council":
+        from src.v2.runners import E1_full_harness
+        return E1_full_harness.run(config_path, run_seed, run_dir)
+    # E2–E5 will be wired in subsequent Phase 2 sub-tasks.
     raise NotImplementedError(
         f"Runner for {experiment!r} is not implemented yet (Phase 2 TODO)."
     )

@@ -17,11 +17,26 @@ Thumbs.db
 .idea/
 *.swp
 
-# Large / reproducible artefacts (tracked implicitly by manifests)
+# Large / reproducible artefacts (tracked implicitly by manifests).
+# Individual small JSONs can still be committed with `git add -f <path>`
+# when we want a permanent paper-grade snapshot.
 experiments/E*/runs/
 experiments/E*/figures/cache/
 *.log
 *.tmp
+
+# Explicit small artefacts we DO want tracked whenever committed with -f:
+# - manifest.json (run provenance)
+# - e1_summary.json / *_summary.json (per-experiment headline metrics)
+# - agent_vote_tally.json (governance health evidence)
+# - best_formula_*.tex (LaTeX headline)
+# - pareto_front_*.json
+# - discovery_report_*.json
+
+# PySR drops a fresh scratch dir per call at CWD/outputs/ (checkpoints,
+# hall_of_fame CSVs). These are large, reproducible from seeds, and
+# clutter git diffs. Always relocate into the run dir or delete.
+outputs/
 
 # Secrets — never commit
 .env
