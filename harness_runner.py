@@ -96,7 +96,10 @@ def _dispatch(experiment: str, config_path: Path, run_seed: int,
     if experiment == "E3_matched_pysr_baselines":
         from src.v2.runners import E3_matched_pysr
         return E3_matched_pysr.run(config_path, run_seed, run_dir)
-    # E4–E5 will be wired in subsequent Phase 2 sub-tasks.
+    if experiment == "E4_ablation_fixed_council":
+        from src.v2.runners import E4_ablation
+        return E4_ablation.run(config_path, run_seed, run_dir)
+    # E5 will be wired in a subsequent Phase 2 sub-task.
     raise NotImplementedError(
         f"Runner for {experiment!r} is not implemented yet (Phase 2 TODO)."
     )
