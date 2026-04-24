@@ -89,37 +89,25 @@ class BaseAgent(ABC):
 
     def _call_llm(self, prompt: str) -> Dict[str, Any]:
         """
-        Try to call the LLM. Falls back to _heuristic_decision() on any failure.
+        Try to call the LLM through the v2 provider shim (supports
+        anthropic and qwen). Falls back to _heuristic_decision() on any
+        failure.
         """
         if self._llm_available is False:
             return self._heuristic_decision(prompt)
 
         try:
-            import anthropic
-            client = anthropic.Anthropic()
-            response = client.messages.create(
-                model=self.config.get("llm_model", "claude-sonnet-4-20250514"),
-                max_tokens=self.config.get("max_tokens", 512),
+            from src.v2.llm_provider import call_llm
+            result = call_llm(
+                prompt,
                 temperature=self.config.get("temperature", 0.3),
-                messages=[{"role": "user", "content": prompt}]
+                max_tokens=self.config.get("max_tokens", 512),
             )
+            if result is None:
+                self._llm_available = False
+                return self._heuristic_decision(prompt)
             self._llm_available = True
-            text = response.content[0].text
-
-            import json, re
-            json_match = re.search(r'\{.*\}', text, re.DOTALL)
-            if json_match:
-                return json.loads(json_match.group())
-            # If no JSON, return raw text under 'text' key
-            return {"text": text}
-
-        except ImportError:
-            self.logger.info(
-                "anthropic package not installed; using heuristic mode"
-            )
-            self._llm_available = False
-            return self._heuristic_decision(prompt)
-
+            return result
         except Exception as e:
             self.logger.warning(f"LLM call failed ({e}); using heuristic mode")
             self._llm_available = False

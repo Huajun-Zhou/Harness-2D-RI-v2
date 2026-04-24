@@ -359,32 +359,22 @@ Respond in valid JSON format only:
 
     def _call_llm(self, prompt: str) -> dict:
         """
-        Call the LLM API (Anthropic Claude).
-        
-        In production, this calls the Anthropic API.
-        For demo/offline mode, uses a heuristic strategy.
+        Call the LLM API via the v2 provider shim (supports anthropic
+        and qwen; selection is driven by the LLM_PROVIDER env var).
+        Falls back to the heuristic rotator on any failure.
         """
         try:
-            import anthropic
-            client = anthropic.Anthropic()
-            response = client.messages.create(
-                model=self.llm_config.get('model', 'claude-sonnet-4-20250514'),
-                max_tokens=self.llm_config.get('max_tokens', 1024),
-                temperature=self.llm_config.get('temperature', 0.7),
-                messages=[{"role": "user", "content": prompt}]
+            from src.v2.llm_provider import call_llm
+            result = call_llm(
+                prompt,
+                temperature=self.llm_config.get("temperature", 0.7),
+                max_tokens=self.llm_config.get("max_tokens", 1024),
             )
-            text = response.content[0].text
-            # Extract JSON from response
-            import re
-            json_match = re.search(r'\{.*\}', text, re.DOTALL)
-            if json_match:
-                return json.loads(json_match.group())
-        except ImportError:
-            logger.info("anthropic package not installed, using heuristic mode")
+            if result is not None:
+                return result
         except Exception as e:
             logger.warning(f"LLM API error: {e}")
 
-        # Fallback
         return self._heuristic_fallback(len(self.experience_pool) + 1)
 
     def _heuristic_fallback(self, round_id: int) -> dict:
