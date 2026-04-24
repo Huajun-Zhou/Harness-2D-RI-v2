@@ -1,0 +1,6 @@
+seed,expression,complexity,val_rmse,test_rmse,test_r2,positivity_violation_rate,sign_ok_pct,has_cbrt,has_inv,has_zmzx_motif
+0,exp((-(atomic_radius_X**4*(-0.47632685) + 1/monolayer_thickness) + (IE_EA_ratio + 8.163481 - 16.842237/atomic_radius_M)**2)**0.333333333333333),20,0.3259,1.0758,0.1328,0.0,0.2,0,1,0
+1,exp((((-atomic_radius_M + electron_affinity_X + 0.5616511)**4 - log(ionization_energy_M))**2 + 1/Z_ratio)**0.333333333333333),16,0.3566,1.152,0.0056,0.0,0.133,0,1,1
+2,(exp(sqrt(monolayer_thickness)/d_electron_count) - 22.22605876 + 34.91302/atomic_radius_M)/electronegativity_M,15,0.3765,1.2807,-0.229,0.0,0.267,0,0,0
+3,sqrt(exp(atomic_radius_X**2 + log(monolayer_thickness**2/(d_electron_count + log(d_electron_count))**2)/d_electron_count) + bond_polarity/(atomic_radius_M*(atomic_radius_M - 1.1644115)**2)),25,0.3112,1.1836,-0.0497,0.0,0.267,0,0,0
+4,exp(monolayer_thickness/((d_electron_count**2*electronegativity_X)) - (electronegativity_X + 1.6951861) + (electronegativity_diff + 6.2535405)/atomic_radius_M),17,0.4362,1.1729,-0.0308,0.0,0.267,0,0,0

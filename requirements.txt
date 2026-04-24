@@ -1,0 +1,31 @@
+# Harness-2D-RI v2 — frozen dependencies (Phase 1)
+#
+# Exact versions used to produce the v2 experiment results. If you want to
+# reproduce a run exactly, use `pip install -r requirements.txt` on Python 3.14.
+#
+# Versions captured 2026-04-24 from the developer machine.
+# If PySR is reinstalled it will rebuild Julia — expect a 2-5 minute first run.
+
+# Core scientific stack
+numpy==2.4.2
+pandas==3.0.0
+scipy==1.17.0
+scikit-learn==1.8.0
+
+# Symbolic regression backend
+pysr==1.5.10
+
+# LLM client (used by llm_sr_engine and base_agent)
+anthropic==0.84.0
+
+# Plotting and notebooks
+matplotlib==3.10.8
+
+# Config loading
+PyYAML==6.0.3
+
+# Parallelism (used by sklearn and some scripts)
+joblib==1.5.3
+
+# JARVIS data access (optional — only needed to rebuild data/extended/ from source)
+# jarvis-tools>=2024.5.0

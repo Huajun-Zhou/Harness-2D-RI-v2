@@ -1,0 +1,20 @@
+ 0  atomic_number_M
+ 1  atomic_number_X
+ 2  electronegativity_M
+ 3  electronegativity_X
+ 4  atomic_radius_M
+ 5  atomic_radius_X
+ 6  ionization_energy_M
+ 7  electron_affinity_X
+ 8  d_electron_count
+ 9  bond_length_MX
+10  lattice_constant_a
+11  monolayer_thickness
+12  coordination_number
+13  point_group_encoded
+14  electronegativity_diff
+15  radius_ratio
+16  bond_polarity
+17  packing_fraction
+18  Z_ratio
+19  IE_EA_ratio

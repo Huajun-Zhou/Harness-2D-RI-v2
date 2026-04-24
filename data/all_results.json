@@ -1,0 +1,328 @@
+{
+  "generated_at": "2026-04-01T14:09:59.971570",
+  "dataset": {
+    "source": "JARVIS-DFT",
+    "n_samples": 94,
+    "n_features": 20,
+    "chalcogen_dist": {
+      "S": 46,
+      "Se": 36,
+      "Te": 12
+    },
+    "n_metals": 17,
+    "y_min": 1.407622,
+    "y_max": 5.657765,
+    "y_mean": 2.8895502872340426,
+    "y_std": 1.1525513051181753
+  },
+  "split": {
+    "seed": 42,
+    "train": 65,
+    "val": 9,
+    "test": 20
+  },
+  "baselines_cv": [
+    {
+      "method": "Mean predictor",
+      "rmse_mean": 1.158857694124081,
+      "rmse_std": 0.1034767533156097,
+      "mae_mean": 1.006112902445614,
+      "mae_std": 0.0967211466655033,
+      "r2_mean": -0.061118207810242374,
+      "r2_std": 0.07430009116699221,
+      "n_folds": 50
+    },
+    {
+      "method": "Ridge (alpha=1.0)",
+      "rmse_mean": 1.0164654431577427,
+      "rmse_std": 0.19783270288941063,
+      "mae_mean": 0.782721090655868,
+      "mae_std": 0.1336321607766979,
+      "r2_mean": 0.17093467719220073,
+      "r2_std": 0.25229835037310516,
+      "n_folds": 50
+    },
+    {
+      "method": "Lasso (alpha=0.1)",
+      "rmse_mean": 1.0642227874795973,
+      "rmse_std": 0.14702337562357712,
+      "mae_mean": 0.8807633540941084,
+      "mae_std": 0.1096271864486265,
+      "r2_mean": 0.1023165486205622,
+      "r2_std": 0.16171564407229663,
+      "n_folds": 50
+    },
+    {
+      "method": "Random Forest (n=100)",
+      "rmse_mean": 0.8638358476976109,
+      "rmse_std": 0.1685845234052181,
+      "mae_mean": 0.6340607679561933,
+      "mae_std": 0.11809944792775103,
+      "r2_mean": 0.398495696441518,
+      "r2_std": 0.18864405046713947,
+      "n_folds": 50
+    },
+    {
+      "method": "Single feature: Z_X linear",
+      "rmse_mean": 1.1213601698505564,
+      "rmse_std": 0.1252145664532585,
+      "mae_mean": 0.9645895903159694,
+      "mae_std": 0.09770859310339677,
+      "r2_mean": 0.005433800296005844,
+      "r2_std": 0.1205950235206803,
+      "n_folds": 50
+    },
+    {
+      "method": "Vanilla PySR (3x5-fold)",
+      "rmse_mean": 1.1102102707453467,
+      "rmse_std": 0.1243481154870021,
+      "mae_mean": 0.9408619921022655,
+      "mae_std": 0.10704663927833272,
+      "r2_mean": 0.01993455528475856,
+      "r2_std": 0.11044024460296738,
+      "n_folds": 15
+    },
+    {
+      "method": "HARNESS formula (Eq.)",
+      "rmse_mean": 1.1247686956470218,
+      "rmse_std": 0.17242502054147393,
+      "mae_mean": 0.8656914593542602,
+      "mae_std": 0.15493983943858905,
+      "r2_mean": -0.04831417278664012,
+      "r2_std": 0.3829432980436538,
+      "n_folds": 50
+    }
+  ],
+  "ablation": [
+    {
+      "variant": "Base PySR (no HARNESS)",
+      "rmse": 0.9682,
+      "mae": 0.7701,
+      "r2": 0.1595,
+      "valid_rate": 1.0,
+      "complexity": 0,
+      "best_expr": "complexity                                                       5\nloss                                                 "
+    },
+    {
+      "variant": "+ Physical constraints (positivity)",
+      "rmse": 0.971,
+      "mae": 0.7115,
+      "r2": 0.1547,
+      "valid_rate": 1.0,
+      "complexity": 0,
+      "best_expr": "complexity                                                      15\nloss                                                 "
+    },
+    {
+      "variant": "+ Causal diagnostics (ValidatorAgent)",
+      "rmse": 0.8378,
+      "mae": 0.6646,
+      "r2": 0.3707,
+      "valid_rate": 1.0,
+      "complexity": 0,
+      "best_expr": "complexity                                                      18\nloss                                                 "
+    },
+    {
+      "variant": "+ Multi-agent veto (AgentCouncil)",
+      "rmse": 0.9688,
+      "mae": 0.8161,
+      "r2": 0.1584,
+      "valid_rate": 1.0,
+      "complexity": 0,
+      "best_expr": "complexity                                             3\nloss                                            1.261856\nequati"
+    },
+    {
+      "variant": "+ Adaptive operator policy",
+      "rmse": 0.9679,
+      "mae": 0.7936,
+      "r2": 0.1601,
+      "valid_rate": 1.0,
+      "complexity": 0,
+      "best_expr": "complexity                                                       7\nloss                                                 "
+    },
+    {
+      "variant": "Full HARNESS (all components)",
+      "rmse": 0.9613,
+      "mae": 0.7128,
+      "r2": 0.1714,
+      "valid_rate": 1.0,
+      "complexity": 0,
+      "best_expr": "complexity                                                      10\nloss                                                 "
+    }
+  ],
+  "loco": [
+    {
+      "held_out_chalcogen": "S",
+      "train_chalcogens": "Se+Te",
+      "n_train": 48,
+      "n_test": 46,
+      "model": "RandomForest",
+      "rmse": 1.1162,
+      "mae": 0.8471,
+      "r2": 0.0011
+    },
+    {
+      "held_out_chalcogen": "S",
+      "train_chalcogens": "Se+Te",
+      "n_train": 48,
+      "n_test": 46,
+      "model": "Ridge",
+      "rmse": 2.2473,
+      "mae": 1.9827,
+      "r2": -3.0488
+    },
+    {
+      "held_out_chalcogen": "S",
+      "train_chalcogens": "Se+Te",
+      "n_train": 48,
+      "n_test": 46,
+      "model": "HARNESS_formula",
+      "rmse": 0.7891,
+      "mae": 0.6175,
+      "r2": 0.5008
+    },
+    {
+      "held_out_chalcogen": "Se",
+      "train_chalcogens": "S+Te",
+      "n_train": 58,
+      "n_test": 36,
+      "model": "RandomForest",
+      "rmse": 1.69,
+      "mae": 1.4503,
+      "r2": -1.6394
+    },
+    {
+      "held_out_chalcogen": "Se",
+      "train_chalcogens": "S+Te",
+      "n_train": 58,
+      "n_test": 36,
+      "model": "Ridge",
+      "rmse": 1.6087,
+      "mae": 1.4423,
+      "r2": -1.3916
+    },
+    {
+      "held_out_chalcogen": "Se",
+      "train_chalcogens": "S+Te",
+      "n_train": 58,
+      "n_test": 36,
+      "model": "HARNESS_formula",
+      "rmse": 1.5291,
+      "mae": 1.2392,
+      "r2": -1.1608
+    },
+    {
+      "held_out_chalcogen": "Te",
+      "train_chalcogens": "S+Se",
+      "n_train": 82,
+      "n_test": 12,
+      "model": "RandomForest",
+      "rmse": 1.6177,
+      "mae": 1.3328,
+      "r2": -2.6747
+    },
+    {
+      "held_out_chalcogen": "Te",
+      "train_chalcogens": "S+Se",
+      "n_train": 82,
+      "n_test": 12,
+      "model": "Ridge",
+      "rmse": 3.1402,
+      "mae": 3.0005,
+      "r2": -12.8473
+    },
+    {
+      "held_out_chalcogen": "Te",
+      "train_chalcogens": "S+Se",
+      "n_train": 82,
+      "n_test": 12,
+      "model": "HARNESS_formula",
+      "rmse": 0.8605,
+      "mae": 0.6968,
+      "r2": -0.0398
+    },
+    {
+      "held_out_chalcogen": "Te",
+      "train_chalcogens": "S",
+      "n_train": 46,
+      "n_test": 12,
+      "model": "RF_pairwise",
+      "rmse": 1.1324,
+      "mae": 0.977,
+      "r2": -0.8005
+    },
+    {
+      "held_out_chalcogen": "S",
+      "train_chalcogens": "Te",
+      "n_train": 12,
+      "n_test": 46,
+      "model": "RF_pairwise",
+      "rmse": 1.8509,
+      "mae": 1.7099,
+      "r2": -1.7466
+    },
+    {
+      "held_out_chalcogen": "Se",
+      "train_chalcogens": "S",
+      "n_train": 46,
+      "n_test": 36,
+      "model": "RF_pairwise",
+      "rmse": 1.1576,
+      "mae": 1.0092,
+      "r2": -0.2384
+    },
+    {
+      "held_out_chalcogen": "S",
+      "train_chalcogens": "Se",
+      "n_train": 36,
+      "n_test": 46,
+      "model": "RF_pairwise",
+      "rmse": 1.1135,
+      "mae": 0.8647,
+      "r2": 0.0059
+    },
+    {
+      "held_out_chalcogen": "Te",
+      "train_chalcogens": "Se",
+      "n_train": 36,
+      "n_test": 12,
+      "model": "RF_pairwise",
+      "rmse": 1.5867,
+      "mae": 1.3028,
+      "r2": -2.5354
+    },
+    {
+      "held_out_chalcogen": "Se",
+      "train_chalcogens": "Te",
+      "n_train": 12,
+      "n_test": 36,
+      "model": "RF_pairwise",
+      "rmse": 1.8668,
+      "mae": 1.6596,
+      "r2": -2.2208
+    }
+  ],
+  "z_m_feat_idx": 0,
+  "z_x_feat_idx": 1,
+  "feat_cols": [
+    "atomic_number_M",
+    "atomic_number_X",
+    "electronegativity_M",
+    "electronegativity_X",
+    "atomic_radius_M",
+    "atomic_radius_X",
+    "ionization_energy_M",
+    "electron_affinity_X",
+    "d_electron_count",
+    "bond_length_MX",
+    "lattice_constant_a",
+    "monolayer_thickness",
+    "coordination_number",
+    "point_group_encoded",
+    "electronegativity_diff",
+    "radius_ratio",
+    "bond_polarity",
+    "packing_fraction",
+    "Z_ratio",
+    "IE_EA_ratio"
+  ]
+}

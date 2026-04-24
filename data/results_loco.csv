@@ -1,0 +1,16 @@
+held_out_chalcogen,train_chalcogens,n_train,n_test,model,rmse,mae,r2
+S,Se+Te,48,46,RandomForest,1.1239,0.8703,-0.0127
+S,Se+Te,48,46,Ridge,2.3834,2.0922,-3.5543
+S,Se+Te,48,46,HARNESS_formula,0.7891,0.6175,0.5008
+Se,S+Te,58,36,RandomForest,1.6576,1.4251,-1.5392
+Se,S+Te,58,36,Ridge,1.6262,1.4367,-1.4439
+Se,S+Te,58,36,HARNESS_formula,1.5291,1.2392,-1.1608
+Te,S+Se,82,12,RandomForest,1.582,1.287,-2.5144
+Te,S+Se,82,12,Ridge,1.8179,1.5945,-3.6409
+Te,S+Se,82,12,HARNESS_formula,0.8605,0.6968,-0.0398
+Te,S,46,12,RF_pairwise,1.1955,1.0415,-1.007
+S,Te,12,46,RF_pairwise,1.8549,1.7142,-1.7585
+Se,S,46,36,RF_pairwise,1.1556,0.9911,-0.234
+S,Se,36,46,RF_pairwise,1.134,0.8837,-0.031
+Te,Se,36,12,RF_pairwise,1.6028,1.308,-2.6075
+Se,Te,12,36,RF_pairwise,1.8636,1.6534,-2.2097

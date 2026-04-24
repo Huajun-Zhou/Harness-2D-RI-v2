@@ -1,0 +1,74 @@
+HARNESS-2D-RI Dataset Summary
+Generated: 2026-04-01T14:08:29.473712
+==================================================
+Source        : JARVIS-DFT (source='jarvis')
+Total samples : 94
+Features      : 20
+
+Chalcogen distribution:
+  S: 46
+  Se: 36
+  Te: 12
+
+Metal distribution:
+  Nb: 16
+  Ta: 10
+  Hf: 10
+  Zr: 8
+  Ti: 6
+  V: 6
+  Mo: 5
+  Pd: 5
+  Co: 4
+  Cr: 4
+  Fe: 4
+  Ni: 4
+  W: 3
+  Re: 3
+  Pt: 3
+  Mn: 2
+  Sc: 1
+
+Target (cauchy_A) statistics:
+  min  = 1.4076
+  max  = 5.6578
+  mean = 2.8896
+  std  = 1.1526
+
+Split (70/10/20 seed=42):
+  train : 65
+  val   : 9
+  test  : 20
+
+Feature names:
+  atomic_number_M
+  atomic_number_X
+  electronegativity_M
+  electronegativity_X
+  atomic_radius_M
+  atomic_radius_X
+  ionization_energy_M
+  electron_affinity_X
+  d_electron_count
+  bond_length_MX
+  lattice_constant_a
+  monolayer_thickness
+  coordination_number
+  point_group_encoded
+  electronegativity_diff
+  radius_ratio
+  bond_polarity
+  packing_fraction
+  Z_ratio
+  IE_EA_ratio
+
+Feature statistics:
+       atomic_number_M  atomic_number_X  electronegativity_M  electronegativity_X  atomic_radius_M  atomic_radius_X  ionization_energy_M  electron_affinity_X  d_electron_count  bond_length_MX  lattice_constant_a  monolayer_thickness  coordination_number  point_group_encoded  electronegativity_diff  radius_ratio  bond_polarity  packing_fraction    Z_ratio  IE_EA_ratio
+count        94.000000        94.000000            94.000000            94.000000        94.000000        94.000000            94.000000            94.000000         94.000000       94.000000           94.000000            94.000000                 94.0                 94.0               94.000000     94.000000      94.000000         94.000000  94.000000    94.000000
+mean         45.829787        27.489362             1.683617             2.507234         1.425106         1.149574             7.231489             2.042979          4.297872        2.601227            4.004227             4.865241                  6.0                  4.0                0.823617      1.251667       0.201440          0.337475   2.014465     3.541711
+std          19.993353        12.618253             0.305814             0.157244         0.113106         0.112870             0.608380             0.039617          2.313261        0.316940            1.123794             4.072491                  0.0                  0.0                0.331779      0.158394       0.087500          0.111967   1.257980     0.313586
+min          21.000000        16.000000             1.300000             2.100000         1.240000         1.050000             6.560000             1.970000          1.000000        2.171000            3.069800             0.500000                  6.0                  4.0                0.190000      0.898551       0.038697          0.057804   0.519231     3.153846
+25%          27.000000        16.000000             1.500000             2.550000         1.345000         1.050000             6.760000             2.020000          2.000000        2.424750            3.362225             3.432150                  6.0                  4.0                0.610000      1.152174       0.146856          0.313700   1.205882     3.283654
+50%          41.000000        34.000000             1.600000             2.550000         1.460000         1.200000             6.830000             2.020000          4.000000        2.545800            3.542350             3.666150                  6.0                  4.0                0.950000      1.217857       0.228916          0.379342   1.468750     3.394921
+75%          72.000000        34.000000             1.880000             2.580000         1.470000         1.200000             7.640000             2.080000          5.000000        2.642275            3.942475             4.662425                  6.0                  4.0                1.040000      1.390476       0.252427          0.406857   2.562500     3.778846
+max          78.000000        52.000000             2.360000             2.580000         1.620000         1.380000             8.960000             2.080000         10.000000        4.188000            9.071600            25.447500                  6.0                  4.0                1.280000      1.542857       0.329897          0.561715   4.875000     4.435644

@@ -1,0 +1,6 @@
+expression,complexity,train_rmse,test_rmse,r2,features,round,physics_valid
+2.8755448,1,1.148521832617909,1.1687361848963438,-0.003602892872998753,"['atomic_number_X', 'bond_polarity', 'd_electron_count', 'electronegativity_diff', 'atomic_number_M']",5,True
+log(x0),2,1.0723597344175135,1.004887149211318,0.258069015209514,"['atomic_number_X', 'bond_polarity', 'd_electron_count', 'electronegativity_diff', 'atomic_number_M']",1,True
+x0 * 0.048 + 1.54,5,0.993,0.965,0.286,,3,True
+(x2 / (x4 - (x0 + x2))) + log(x0 - x2),12,0.8550550625544533,0.980169455057566,0.2941193891002155,"['atomic_number_X', 'bond_polarity', 'd_electron_count', 'electronegativity_diff', 'atomic_number_M']",3,True
+cbrt(inv(21.345436 - x4) + cbrt(1.7584853 - (x4 / x0))) + 3.2921417,14,0.7760295741787164,0.9545593791784459,0.3305242933648851,"['atomic_number_X', 'bond_polarity', 'd_electron_count', 'electronegativity_diff', 'atomic_number_M']",8,True

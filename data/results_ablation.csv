@@ -1,0 +1,14 @@
+variant,rmse,mae,r2,valid_rate,complexity,best_expr
+Base PySR (no HARNESS),0.9682,0.7701,0.1595,1.0,0,"complexity                                                       5
+loss                                                 "
++ Physical constraints (positivity),0.971,0.7115,0.1547,1.0,0,"complexity                                                      15
+loss                                                 "
++ Causal diagnostics (ValidatorAgent),0.8378,0.6646,0.3707,1.0,0,"complexity                                                      18
+loss                                                 "
++ Multi-agent veto (AgentCouncil),0.9688,0.8161,0.1584,1.0,0,"complexity                                             3
+loss                                            1.261856
+equati"
++ Adaptive operator policy,0.9679,0.7936,0.1601,1.0,0,"complexity                                                       7
+loss                                                 "
+Full HARNESS (all components),0.9613,0.7128,0.1714,1.0,0,"complexity                                                      10
+loss                                                 "
