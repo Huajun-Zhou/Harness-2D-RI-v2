@@ -1,0 +1,46 @@
+{
+  "cmdline": [
+    "harness_runner.py",
+    "--experiment",
+    "E4_ablation_fixed_council",
+    "--config",
+    "experiments/E4_ablation_fixed_council/configs/E4_default.yaml",
+    "--run-seed",
+    "42",
+    "--run-id",
+    "E4_seed42_3seeds",
+    "--notes",
+    "Phase 2.4 production \u2014 5 variants \u00d7 3 seeds, Qwen-max, fixed 4-agent council"
+  ],
+  "config_path": "/Users/ikun/Desktop/Harness-2DTMDs/experiments/E4_ablation_fixed_council/configs/E4_default.yaml",
+  "config_sha256": "372a435ec8bcfc9b9c81240b8b324c99ef44ce337b9a79863a81119c7ebb6c65",
+  "data": {
+    "data/extended/tier2_binary.csv": "cc50715bc68e198debe6b15ed3c6334337e6db5508cb2a825a44dd1d33540108"
+  },
+  "data_files": [
+    "data/extended/tier2_binary.csv"
+  ],
+  "env_summary": {},
+  "experiment": "E4_ablation_fixed_council",
+  "git": {
+    "branch": "main",
+    "commit": "500f71f898246a8c862fe263b2e8206053c9f2e4",
+    "dirty": false,
+    "repo": true,
+    "short": "500f71f"
+  },
+  "notes": "Phase 2.4 production \u2014 5 variants \u00d7 3 seeds, Qwen-max, fixed 4-agent council",
+  "pkg_versions": {
+    "anthropic": "0.84.0",
+    "numpy": "2.4.2",
+    "pandas": "3.0.0",
+    "pysr": "1.5.10",
+    "sklearn": "1.8.0"
+  },
+  "platform": "macOS-15.3.1-arm64-arm-64bit-Mach-O",
+  "python_version": "3.14.3",
+  "run_id": "E4_seed42_3seeds",
+  "run_seed": 42,
+  "timestamp_end": "2026-04-24T16:14:49.960276+00:00",
+  "timestamp_start": "2026-04-24T15:49:47.043062+00:00"
+}

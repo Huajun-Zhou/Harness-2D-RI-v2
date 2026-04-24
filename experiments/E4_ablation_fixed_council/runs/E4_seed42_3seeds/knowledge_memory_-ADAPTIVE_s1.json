@@ -1,0 +1,44 @@
+{
+  "exclusion_rules": [],
+  "success_patterns": [],
+  "failure_analyses": [
+    {
+      "entry_type": "failure_analysis",
+      "pattern": "features:Z_ratio,atomic_number_M,atomic_number_X,bond_polarity,d_electron_count",
+      "description": "Feature set ['Z_ratio', 'atomic_number_M', 'atomic_number_X', 'bond_polarity', 'd_electron_count'] failed: Causal Diagnostic Report for: (((x2 / (x0 / (10.511989 - x2))) - x4) * 1.8156816) + 1.8768865\n\nViolations: 5 material(s) violated positivity constraint (n > 1):\n  - CuBr2_0: predicted n=0.8470 (actual",
+      "evidence_count": 1,
+      "confidence": 0.4,
+      "round_ids": [
+        4
+      ],
+      "formulas": [
+        "(((x2 / (x0 / (10.511989 - x2))) - x4) * 1.8156816) + 1.8768865"
+      ],
+      "metadata": {
+        "violation_fraction": 0.1282051282051282,
+        "feature_sensitivities": {
+          "atomic_number_M": -0.012257604411480827,
+          "atomic_number_X": 0.0,
+          "electronegativity_M": 0.27940914029578323,
+          "electronegativity_X": 0.0,
+          "atomic_radius_M": -1.8156815999992304,
+          "atomic_radius_X": 0.0,
+          "ionization_energy_M": 0.0,
+          "electron_affinity_X": 0.0,
+          "d_electron_count": 0.0,
+          "bond_length_MX": 0.0,
+          "lattice_constant_a": 0.0,
+          "monolayer_thickness": 0.0,
+          "coordination_number": 0.0,
+          "point_group_encoded": 0.0,
+          "electronegativity_diff": 0.0,
+          "radius_ratio": 0.0,
+          "bond_polarity": 0.0,
+          "packing_fraction": 0.0,
+          "Z_ratio": 0.0,
+          "IE_EA_ratio": 0.0
+        }
+      }
+    }
+  ]
+}
