@@ -1,0 +1,11 @@
+{
+  "per_agent_activity_counts": {
+    "DataAgent": 7,
+    "TheoryAgent": 7,
+    "MetaAgent": 14,
+    "ValidatorAgent": 14
+  },
+  "failures": [],
+  "total_failures": 0,
+  "data_agent_active": true
+}

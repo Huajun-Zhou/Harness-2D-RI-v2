@@ -90,7 +90,10 @@ def _dispatch(experiment: str, config_path: Path, run_seed: int,
     if experiment == "E1_full_harness_fixed_council":
         from src.v2.runners import E1_full_harness
         return E1_full_harness.run(config_path, run_seed, run_dir)
-    # E2–E5 will be wired in subsequent Phase 2 sub-tasks.
+    if experiment == "E2_outer_loco":
+        from src.v2.runners import E2_outer_loco
+        return E2_outer_loco.run(config_path, run_seed, run_dir)
+    # E3–E5 will be wired in subsequent Phase 2 sub-tasks.
     raise NotImplementedError(
         f"Runner for {experiment!r} is not implemented yet (Phase 2 TODO)."
     )

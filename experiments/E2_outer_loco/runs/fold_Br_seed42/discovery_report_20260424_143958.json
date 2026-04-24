@@ -1,0 +1,20 @@
+{
+  "timestamp": "20260424_143958",
+  "target": "cauchy_A",
+  "best_formula": "exp((-1.4625963 / x3) + (sqrt(exp(cbrt(cbrt(cbrt(cbrt(2.048321 / (x2 - 22.490824)) + -0.6588017))))) - x4)) - -0.35647237",
+  "metrics": {
+    "train_rmse": 0.5487447494054044,
+    "test_rmse": 0.3879357417547612,
+    "r2": 0.6802802299605976,
+    "complexity": 22
+  },
+  "features_used": [
+    "d_electron_count",
+    "Z_ratio",
+    "atomic_number_M",
+    "atomic_number_X",
+    "bond_polarity"
+  ],
+  "experience_pool_size": 10,
+  "pareto_front_size": 19
+}

@@ -1,0 +1,172 @@
+[
+  {
+    "expression": "square((x5 / x1) + 1.3048358)",
+    "complexity": 6,
+    "train_rmse": 0.832274473956759,
+    "test_rmse": 0.6432444836581432,
+    "r2": 0.05194747801746147,
+    "features": [
+      "monolayer_thickness",
+      "atomic_number_M",
+      "Z_ratio",
+      "atomic_number_X",
+      "bond_polarity",
+      "d_electron_count"
+    ],
+    "round": 1,
+    "physics_valid": true
+  },
+  {
+    "expression": "1.9298218",
+    "complexity": 1,
+    "train_rmse": 0.9056481988056951,
+    "test_rmse": 0.689584951860917,
+    "r2": -0.08957168450676911,
+    "features": [
+      "monolayer_thickness",
+      "atomic_number_M",
+      "Z_ratio",
+      "atomic_number_X",
+      "bond_polarity",
+      "d_electron_count"
+    ],
+    "round": 3,
+    "physics_valid": true
+  },
+  {
+    "expression": "2.1612215 - x4",
+    "complexity": 3,
+    "train_rmse": 0.9045853746330415,
+    "test_rmse": 0.6765967292593288,
+    "r2": -0.04891439353700022,
+    "features": [
+      "monolayer_thickness",
+      "atomic_number_M",
+      "Z_ratio",
+      "atomic_number_X",
+      "bond_polarity",
+      "d_electron_count"
+    ],
+    "round": 5,
+    "physics_valid": true
+  },
+  {
+    "expression": "(cbrt(inv(square(-2.877383 / (x1 + -25.688242)) + -0.96761805)) + (-3.837436 / (x0 * ((x3 / (x1 + -25.868832)) + 7.7697387)))) + (-0.7779665 - (x4 + -3.8627741))",
+    "complexity": 28,
+    "train_rmse": 0.5195858928031053,
+    "test_rmse": 0.3381698535183256,
+    "r2": 0.7379705919835806,
+    "features": [
+      "monolayer_thickness",
+      "atomic_number_M",
+      "Z_ratio",
+      "atomic_number_X",
+      "bond_polarity",
+      "d_electron_count"
+    ],
+    "round": 6,
+    "physics_valid": true
+  },
+  {
+    "expression": "cbrt(cbrt(inv((log(x3) / square(x1 + -25.548914)) + -0.41455293))) - -2.7782729",
+    "complexity": 14,
+    "train_rmse": 0.5803762141921394,
+    "test_rmse": 0.34941638536968106,
+    "r2": 0.7202521287902758,
+    "features": [
+      "monolayer_thickness",
+      "atomic_number_M",
+      "Z_ratio",
+      "atomic_number_X",
+      "bond_polarity",
+      "d_electron_count"
+    ],
+    "round": 6,
+    "physics_valid": true
+  },
+  {
+    "expression": "inv(cbrt(square(-2.9832828 / (x1 + -25.695156)) + -1.0890198)) - -2.6874483",
+    "complexity": 12,
+    "train_rmse": 0.607541825720666,
+    "test_rmse": 0.35718274745795925,
+    "r2": 0.7076782001396478,
+    "features": [
+      "monolayer_thickness",
+      "atomic_number_M",
+      "Z_ratio",
+      "atomic_number_X",
+      "bond_polarity",
+      "d_electron_count"
+    ],
+    "round": 6,
+    "physics_valid": true
+  },
+  {
+    "expression": "(4.770218 / square(x1 + -26.46305)) + 1.6988891",
+    "complexity": 8,
+    "train_rmse": 0.7067240904341665,
+    "test_rmse": 0.41661049944752865,
+    "r2": 0.6023136555529649,
+    "features": [
+      "monolayer_thickness",
+      "atomic_number_M",
+      "Z_ratio",
+      "atomic_number_X",
+      "bond_polarity",
+      "d_electron_count"
+    ],
+    "round": 6,
+    "physics_valid": true
+  },
+  {
+    "expression": "cbrt(x5 + 4.5236087)",
+    "complexity": 4,
+    "train_rmse": 0.8942366185747483,
+    "test_rmse": 0.671070514461281,
+    "r2": -0.03185000657139003,
+    "features": [
+      "monolayer_thickness",
+      "atomic_number_M",
+      "Z_ratio",
+      "atomic_number_X",
+      "bond_polarity",
+      "d_electron_count"
+    ],
+    "round": 6,
+    "physics_valid": true
+  },
+  {
+    "expression": "sqrt(cbrt(x5) + 2.7909296)",
+    "complexity": 5,
+    "train_rmse": 0.8605750984080355,
+    "test_rmse": 0.6612709481455009,
+    "r2": -0.0019340663641935762,
+    "features": [
+      "monolayer_thickness",
+      "atomic_number_M",
+      "Z_ratio",
+      "atomic_number_X",
+      "bond_polarity",
+      "d_electron_count"
+    ],
+    "round": 9,
+    "physics_valid": true
+  },
+  {
+    "expression": "1.9298218",
+    "complexity": 1,
+    "train_rmse": 0.9056481988056951,
+    "test_rmse": 0.689584951860917,
+    "r2": -0.08957168450676911,
+    "features": [
+      "monolayer_thickness",
+      "atomic_number_M",
+      "Z_ratio",
+      "atomic_number_X",
+      "bond_polarity",
+      "d_electron_count"
+    ],
+    "round": 10,
+    "physics_valid": true
+  }
+]

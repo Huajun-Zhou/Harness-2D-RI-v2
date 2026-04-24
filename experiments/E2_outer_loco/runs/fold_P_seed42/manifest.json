@@ -1,0 +1,46 @@
+{
+  "cmdline": [
+    "harness_runner.py",
+    "--experiment",
+    "E2_outer_loco",
+    "--config",
+    "experiments/E2_outer_loco/configs/fold_P.yaml",
+    "--run-seed",
+    "42",
+    "--run-id",
+    "fold_P_seed42",
+    "--notes",
+    "E2 Phase 2.2.e production fold, outer_anion=P"
+  ],
+  "config_path": "/Users/ikun/Desktop/Harness-2DTMDs/experiments/E2_outer_loco/configs/fold_P.yaml",
+  "config_sha256": "a7bd7698e397572089b9cbf49eece43bfcfd7cf8f548a3f88e430b692a424f7c",
+  "data": {
+    "data/extended/tier2_binary.csv": "cc50715bc68e198debe6b15ed3c6334337e6db5508cb2a825a44dd1d33540108"
+  },
+  "data_files": [
+    "data/extended/tier2_binary.csv"
+  ],
+  "env_summary": {},
+  "experiment": "E2_outer_loco",
+  "git": {
+    "branch": "main",
+    "commit": "52629c30b78eadf2fe47bf330111e501a395e140",
+    "dirty": true,
+    "repo": true,
+    "short": "52629c3"
+  },
+  "notes": "E2 Phase 2.2.e production fold, outer_anion=P",
+  "pkg_versions": {
+    "anthropic": "0.84.0",
+    "numpy": "2.4.2",
+    "pandas": "3.0.0",
+    "pysr": "1.5.10",
+    "sklearn": "1.8.0"
+  },
+  "platform": "macOS-15.3.1-arm64-arm-64bit-Mach-O",
+  "python_version": "3.14.3",
+  "run_id": "fold_P_seed42",
+  "run_seed": 42,
+  "timestamp_end": "2026-04-24T06:43:45.936767+00:00",
+  "timestamp_start": "2026-04-24T06:42:07.988146+00:00"
+}

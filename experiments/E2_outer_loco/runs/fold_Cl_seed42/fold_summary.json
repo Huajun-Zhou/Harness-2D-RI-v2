@@ -1,0 +1,358 @@
+{
+  "outer_anion": "Cl",
+  "run_seed": 42,
+  "inner_split_seed": 2911454255,
+  "n_outer_test": 27,
+  "n_outer_pool": 166,
+  "n_inner_train": 132,
+  "n_inner_screen": 34,
+  "target": "cauchy_A",
+  "headline": {
+    "expression": "sqrt((cbrt(x5) / square(x1)) + 2.81394)",
+    "complexity": 8,
+    "features_used": [
+      "electronegativity_X",
+      "Z_ratio",
+      "atomic_radius_X",
+      "atomic_number_X",
+      "bond_polarity",
+      "d_electron_count"
+    ],
+    "inner_train_rmse": 0.6531878749640107,
+    "inner_screen_rmse": 0.5875328624183302,
+    "inner_screen_r2": 0.47804036004232253
+  },
+  "outer_test_metrics": {
+    "rmse": 1.3167463815283416,
+    "mae": 0.9149342888019332,
+    "r2": 0.00346816431582464,
+    "n_finite": 27,
+    "n_total": 27,
+    "finite_fraction": 1.0
+  },
+  "pareto_outer_evals": [
+    {
+      "expression": "5.0171466 / x0",
+      "complexity": 3,
+      "features_used": [
+        "electronegativity_X",
+        "Z_ratio",
+        "atomic_radius_X",
+        "atomic_number_X",
+        "bond_polarity",
+        "d_electron_count"
+      ],
+      "inner_train_rmse": 0.7113298812787214,
+      "inner_screen_rmse": 0.7781010706138795,
+      "outer_rmse": 1.4367256284132215,
+      "outer_mae": 0.9195647310513122,
+      "outer_r2": -0.18640942439254626,
+      "outer_n_finite": 27,
+      "outer_n_total": 27
+    },
+    {
+      "expression": "5.0171466 / x0",
+      "complexity": 3,
+      "features_used": [
+        "electronegativity_X",
+        "Z_ratio",
+        "atomic_radius_X",
+        "atomic_number_X",
+        "bond_polarity",
+        "d_electron_count"
+      ],
+      "inner_train_rmse": 0.7113298812787214,
+      "inner_screen_rmse": 0.7781010706138795,
+      "outer_rmse": 1.4367256284132215,
+      "outer_mae": 0.9195647310513122,
+      "outer_r2": -0.18640942439254626,
+      "outer_n_finite": 27,
+      "outer_n_total": 27
+    },
+    {
+      "expression": "1.8509372",
+      "complexity": 1,
+      "features_used": [
+        "electronegativity_X",
+        "Z_ratio",
+        "atomic_radius_X",
+        "atomic_number_X",
+        "bond_polarity",
+        "d_electron_count"
+      ],
+      "inner_train_rmse": 0.7275370093679083,
+      "inner_screen_rmse": 0.815607035316069,
+      "outer_rmse": 1.3541241665068782,
+      "outer_mae": 0.9969945868930696,
+      "outer_r2": -0.053910880031174724,
+      "outer_n_finite": 27,
+      "outer_n_total": 27
+    },
+    {
+      "expression": "1.8509372",
+      "complexity": 1,
+      "features_used": [
+        "electronegativity_X",
+        "Z_ratio",
+        "atomic_radius_X",
+        "atomic_number_X",
+        "bond_polarity",
+        "d_electron_count"
+      ],
+      "inner_train_rmse": 0.7275370093679083,
+      "inner_screen_rmse": 0.815607035316069,
+      "outer_rmse": 1.3541241665068782,
+      "outer_mae": 0.9969945868930696,
+      "outer_r2": -0.053910880031174724,
+      "outer_n_finite": 27,
+      "outer_n_total": 27
+    },
+    {
+      "expression": "5.0171466 / x0",
+      "complexity": 3,
+      "features_used": [
+        "electronegativity_X",
+        "Z_ratio",
+        "atomic_radius_X",
+        "atomic_number_X",
+        "bond_polarity",
+        "d_electron_count"
+      ],
+      "inner_train_rmse": 0.7113298812787214,
+      "inner_screen_rmse": 0.7781010706138795,
+      "outer_rmse": 1.4367256284132215,
+      "outer_mae": 0.9195647310513122,
+      "outer_r2": -0.18640942439254626,
+      "outer_n_finite": 27,
+      "outer_n_total": 27
+    },
+    {
+      "expression": "1.8509372",
+      "complexity": 1,
+      "features_used": [
+        "electronegativity_X",
+        "Z_ratio",
+        "atomic_radius_X",
+        "atomic_number_X",
+        "bond_polarity",
+        "d_electron_count"
+      ],
+      "inner_train_rmse": 0.7275370093679083,
+      "inner_screen_rmse": 0.815607035316069,
+      "outer_rmse": 1.3541241665068782,
+      "outer_mae": 0.9969945868930696,
+      "outer_r2": -0.053910880031174724,
+      "outer_n_finite": 27,
+      "outer_n_total": 27
+    },
+    {
+      "expression": "1.8509372",
+      "complexity": 1,
+      "features_used": [
+        "electronegativity_X",
+        "Z_ratio",
+        "atomic_radius_X",
+        "atomic_number_X",
+        "bond_polarity",
+        "d_electron_count"
+      ],
+      "inner_train_rmse": 0.7275370093679083,
+      "inner_screen_rmse": 0.815607035316069,
+      "outer_rmse": 1.3541241665068782,
+      "outer_mae": 0.9969945868930696,
+      "outer_r2": -0.053910880031174724,
+      "outer_n_finite": 27,
+      "outer_n_total": 27
+    },
+    {
+      "expression": "1.8509372",
+      "complexity": 1,
+      "features_used": [
+        "electronegativity_X",
+        "Z_ratio",
+        "atomic_radius_X",
+        "atomic_number_X",
+        "bond_polarity",
+        "d_electron_count"
+      ],
+      "inner_train_rmse": 0.7275370093679083,
+      "inner_screen_rmse": 0.815607035316069,
+      "outer_rmse": 1.3541241665068782,
+      "outer_mae": 0.9969945868930696,
+      "outer_r2": -0.053910880031174724,
+      "outer_n_finite": 27,
+      "outer_n_total": 27
+    },
+    {
+      "expression": "sqrt((cbrt(x5) / square(x1)) + 2.81394)",
+      "complexity": 8,
+      "features_used": [
+        "electronegativity_X",
+        "Z_ratio",
+        "atomic_radius_X",
+        "atomic_number_X",
+        "bond_polarity",
+        "d_electron_count"
+      ],
+      "inner_train_rmse": 0.6531878749640107,
+      "inner_screen_rmse": 0.5875328624183302,
+      "outer_rmse": 1.3167463815283416,
+      "outer_mae": 0.9149342888019332,
+      "outer_r2": 0.00346816431582464,
+      "outer_n_finite": 27,
+      "outer_n_total": 27
+    },
+    {
+      "expression": "sqrt((cbrt(x5) / x1) + 2.81394)",
+      "complexity": 7,
+      "features_used": [
+        "electronegativity_X",
+        "Z_ratio",
+        "atomic_radius_X",
+        "atomic_number_X",
+        "bond_polarity",
+        "d_electron_count"
+      ],
+      "inner_train_rmse": 0.6685359825768542,
+      "inner_screen_rmse": 0.6721609864794946,
+      "outer_rmse": 1.2799863336884578,
+      "outer_mae": 0.9165582858434465,
+      "outer_r2": 0.058332512974231365,
+      "outer_n_finite": 27,
+      "outer_n_total": 27
+    },
+    {
+      "expression": "5.0171466 / x0",
+      "complexity": 3,
+      "features_used": [
+        "electronegativity_X",
+        "Z_ratio",
+        "atomic_radius_X",
+        "atomic_number_X",
+        "bond_polarity",
+        "d_electron_count"
+      ],
+      "inner_train_rmse": 0.7113298812787214,
+      "inner_screen_rmse": 0.7781010706138795,
+      "outer_rmse": 1.4367256284132215,
+      "outer_mae": 0.9195647310513122,
+      "outer_r2": -0.18640942439254626,
+      "outer_n_finite": 27,
+      "outer_n_total": 27
+    },
+    {
+      "expression": "1.8509372",
+      "complexity": 1,
+      "features_used": [
+        "electronegativity_X",
+        "Z_ratio",
+        "atomic_radius_X",
+        "atomic_number_X",
+        "bond_polarity",
+        "d_electron_count"
+      ],
+      "inner_train_rmse": 0.7275370093679083,
+      "inner_screen_rmse": 0.815607035316069,
+      "outer_rmse": 1.3541241665068782,
+      "outer_mae": 0.9969945868930696,
+      "outer_r2": -0.053910880031174724,
+      "outer_n_finite": 27,
+      "outer_n_total": 27
+    },
+    {
+      "expression": "sqrt(cbrt(x5) + 2.6530273)",
+      "complexity": 5,
+      "features_used": [
+        "electronegativity_X",
+        "Z_ratio",
+        "atomic_radius_X",
+        "atomic_number_X",
+        "bond_polarity",
+        "d_electron_count"
+      ],
+      "inner_train_rmse": 0.6984570137095053,
+      "inner_screen_rmse": 0.777067043115067,
+      "outer_rmse": 1.255443256413989,
+      "outer_mae": 0.9357451523386419,
+      "outer_r2": 0.09409827475452137,
+      "outer_n_finite": 27,
+      "outer_n_total": 27
+    },
+    {
+      "expression": "5.0171466 / x0",
+      "complexity": 3,
+      "features_used": [
+        "electronegativity_X",
+        "Z_ratio",
+        "atomic_radius_X",
+        "atomic_number_X",
+        "bond_polarity",
+        "d_electron_count"
+      ],
+      "inner_train_rmse": 0.7113298812787214,
+      "inner_screen_rmse": 0.7781010706138795,
+      "outer_rmse": 1.4367256284132215,
+      "outer_mae": 0.9195647310513122,
+      "outer_r2": -0.18640942439254626,
+      "outer_n_finite": 27,
+      "outer_n_total": 27
+    },
+    {
+      "expression": "inv(-1.6167909 - x5) + 2.2499192",
+      "complexity": 6,
+      "features_used": [
+        "electronegativity_X",
+        "Z_ratio",
+        "atomic_radius_X",
+        "atomic_number_X",
+        "bond_polarity",
+        "d_electron_count"
+      ],
+      "inner_train_rmse": 0.6929593494570948,
+      "inner_screen_rmse": 0.7738509435962508,
+      "outer_rmse": 1.2484115048125726,
+      "outer_mae": 0.9260611219760603,
+      "outer_r2": 0.10421778663507675,
+      "outer_n_finite": 27,
+      "outer_n_total": 27
+    },
+    {
+      "expression": "5.0171466 / x0",
+      "complexity": 3,
+      "features_used": [
+        "electronegativity_X",
+        "Z_ratio",
+        "atomic_radius_X",
+        "atomic_number_X",
+        "bond_polarity",
+        "d_electron_count"
+      ],
+      "inner_train_rmse": 0.7113298812787214,
+      "inner_screen_rmse": 0.7781010706138795,
+      "outer_rmse": 1.4367256284132215,
+      "outer_mae": 0.9195647310513122,
+      "outer_r2": -0.18640942439254626,
+      "outer_n_finite": 27,
+      "outer_n_total": 27
+    },
+    {
+      "expression": "5.0171466 / x0",
+      "complexity": 3,
+      "features_used": [
+        "electronegativity_X",
+        "Z_ratio",
+        "atomic_radius_X",
+        "atomic_number_X",
+        "bond_polarity",
+        "d_electron_count"
+      ],
+      "inner_train_rmse": 0.7113298812787214,
+      "inner_screen_rmse": 0.7781010706138795,
+      "outer_rmse": 1.4367256284132215,
+      "outer_mae": 0.9195647310513122,
+      "outer_r2": -0.18640942439254626,
+      "outer_n_finite": 27,
+      "outer_n_total": 27
+    }
+  ]
+}

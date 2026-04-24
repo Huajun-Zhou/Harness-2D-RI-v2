@@ -1,0 +1,98 @@
+[
+  {
+    "expression": "square(2.3358307 / (x1 + -26.507818)) + 1.6540009",
+    "complexity": 8,
+    "train_rmse": 0.7146165405306542,
+    "test_rmse": 0.5701771126267446,
+    "r2": 0.44470903234226133,
+    "features": [
+      "d_electron_count",
+      "atomic_number_M",
+      "monolayer_thickness",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 3,
+    "physics_valid": true
+  },
+  {
+    "expression": "sqrt(cbrt(x0) + 2.676087)",
+    "complexity": 5,
+    "train_rmse": 0.8921946368366042,
+    "test_rmse": 0.7213014910337179,
+    "r2": 0.11134189051579002,
+    "features": [
+      "d_electron_count",
+      "atomic_number_M",
+      "monolayer_thickness",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 3,
+    "physics_valid": true
+  },
+  {
+    "expression": "1.8948954",
+    "complexity": 1,
+    "train_rmse": 0.9509909568444906,
+    "test_rmse": 0.7684551424691954,
+    "r2": -0.008644421638447808,
+    "features": [
+      "d_electron_count",
+      "atomic_number_M",
+      "monolayer_thickness",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 3,
+    "physics_valid": true
+  },
+  {
+    "expression": "(x0 / (x1 + -20.174852)) + 1.6367196",
+    "complexity": 7,
+    "train_rmse": 0.7727895767930621,
+    "test_rmse": 0.579955862723069,
+    "r2": 0.42549880735391155,
+    "features": [
+      "d_electron_count",
+      "atomic_number_M",
+      "monolayer_thickness",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 4,
+    "physics_valid": true
+  },
+  {
+    "expression": "log((x0 / exp(cbrt(x1 - 28.622162))) - -4.1924114)",
+    "complexity": 10,
+    "train_rmse": 0.6872238136153316,
+    "test_rmse": 0.48654656876896296,
+    "r2": 0.5956570485314581,
+    "features": [
+      "d_electron_count",
+      "atomic_number_M",
+      "monolayer_thickness",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 7,
+    "physics_valid": true
+  },
+  {
+    "expression": "cbrt(x0 + 4.1394567)",
+    "complexity": 4,
+    "train_rmse": 0.9167678550211062,
+    "test_rmse": 0.7477422584757948,
+    "r2": 0.04499664056661812,
+    "features": [
+      "d_electron_count",
+      "atomic_number_M",
+      "monolayer_thickness",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 7,
+    "physics_valid": true
+  }
+]

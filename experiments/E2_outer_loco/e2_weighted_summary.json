@@ -1,0 +1,9 @@
+{
+  "n_folds": 10,
+  "total_outer_samples": 193,
+  "weighted_outer_rmse": 0.7613223753640838,
+  "weighted_outer_mae": 0.5291499824869811,
+  "mean_outer_r2": -16.133980681966886,
+  "worst_fold_by_rmse": "Cl",
+  "best_fold_by_rmse": "N"
+}

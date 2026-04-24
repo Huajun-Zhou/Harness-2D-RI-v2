@@ -1,0 +1,162 @@
+[
+  {
+    "expression": "exp((inv(1.0571061 - square(square(square(square(((x2 * 0.15272033) + -3.9130242) * inv(-0.45617288)))))) + 0.6958726) - x4)",
+    "complexity": 20,
+    "train_rmse": 0.6058885376040712,
+    "test_rmse": 0.26947754925167916,
+    "r2": 0.7373272480564632,
+    "features": [
+      "Z_ratio",
+      "d_electron_count",
+      "atomic_number_M",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 3,
+    "physics_valid": true
+  },
+  {
+    "expression": "exp((0.7386019 - x4) + inv(square(square(square(square(((x2 * 0.21882664) + -5.5831523) * -1.5385407)))) + 1.1398388))",
+    "complexity": 19,
+    "train_rmse": 0.6059151508255921,
+    "test_rmse": 0.3116050337945061,
+    "r2": 0.6487803743446314,
+    "features": [
+      "Z_ratio",
+      "d_electron_count",
+      "atomic_number_M",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 3,
+    "physics_valid": true
+  },
+  {
+    "expression": "inv(square(-0.37376228 - square(square((x2 - 25.648436) * -0.2658474))) + x4) + 1.6572435",
+    "complexity": 15,
+    "train_rmse": 0.6640031475829011,
+    "test_rmse": 0.3859992340680682,
+    "r2": 0.46105712865680304,
+    "features": [
+      "Z_ratio",
+      "d_electron_count",
+      "atomic_number_M",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 3,
+    "physics_valid": true
+  },
+  {
+    "expression": "inv(square(-0.6616873 - square(square((x2 - 25.813421) * -0.24619563)))) + 1.6743467",
+    "complexity": 13,
+    "train_rmse": 0.6944104909921797,
+    "test_rmse": 0.41314097936372396,
+    "r2": 0.38260032661736254,
+    "features": [
+      "Z_ratio",
+      "d_electron_count",
+      "atomic_number_M",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 3,
+    "physics_valid": true
+  },
+  {
+    "expression": "sqrt(cbrt(x1) + 2.893417)",
+    "complexity": 5,
+    "train_rmse": 0.9163516246507123,
+    "test_rmse": 0.5919708129368818,
+    "r2": -0.26756557171100503,
+    "features": [
+      "Z_ratio",
+      "d_electron_count",
+      "atomic_number_M",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 4,
+    "physics_valid": true
+  },
+  {
+    "expression": "2.198558 - x4",
+    "complexity": 3,
+    "train_rmse": 0.9626347697855091,
+    "test_rmse": 0.5928186219337614,
+    "r2": -0.27119893680660456,
+    "features": [
+      "Z_ratio",
+      "d_electron_count",
+      "atomic_number_M",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 5,
+    "physics_valid": true
+  },
+  {
+    "expression": "square((2.1686852 / (x2 + -26.953371)) - 0.45170847) + cbrt(log(x3))",
+    "complexity": 12,
+    "train_rmse": 0.69593213031157,
+    "test_rmse": 0.4479324861457039,
+    "r2": 0.274236760083408,
+    "features": [
+      "Z_ratio",
+      "d_electron_count",
+      "atomic_number_M",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 6,
+    "physics_valid": true
+  },
+  {
+    "expression": "square(0.43231186 - (2.126935 / (x2 + -26.954777))) + 1.5411061",
+    "complexity": 10,
+    "train_rmse": 0.7113889583062137,
+    "test_rmse": 0.4555784688290174,
+    "r2": 0.2492484677052239,
+    "features": [
+      "Z_ratio",
+      "d_electron_count",
+      "atomic_number_M",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 6,
+    "physics_valid": true
+  },
+  {
+    "expression": "(x1 / (x2 + -20.101103)) + 1.6839045",
+    "complexity": 7,
+    "train_rmse": 0.8048661379384774,
+    "test_rmse": 0.4882874104933566,
+    "r2": 0.13757586840388625,
+    "features": [
+      "Z_ratio",
+      "d_electron_count",
+      "atomic_number_M",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 6,
+    "physics_valid": true
+  },
+  {
+    "expression": "1.9690431",
+    "complexity": 1,
+    "train_rmse": 0.9704881761258094,
+    "test_rmse": 0.6092442743010921,
+    "r2": -0.3426189071136576,
+    "features": [
+      "Z_ratio",
+      "d_electron_count",
+      "atomic_number_M",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 10,
+    "physics_valid": true
+  }
+]
