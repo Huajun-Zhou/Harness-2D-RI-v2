@@ -1,0 +1,46 @@
+{
+  "cmdline": [
+    "harness_runner.py",
+    "--experiment",
+    "E2_outer_loco",
+    "--config",
+    "experiments/E2_outer_loco/configs/fold_O.yaml",
+    "--run-seed",
+    "42",
+    "--run-id",
+    "fold_O_seed42_qwen",
+    "--notes",
+    "E2 Phase 2.3.X \u2014 Qwen-max driving Harness, outer_anion=O"
+  ],
+  "config_path": "/Users/ikun/Desktop/Harness-2DTMDs/experiments/E2_outer_loco/configs/fold_O.yaml",
+  "config_sha256": "c67d73f254b047897e8ecfcf8bb2cc169ae87901305ad453fa02bb690012cacb",
+  "data": {
+    "data/extended/tier2_binary.csv": "cc50715bc68e198debe6b15ed3c6334337e6db5508cb2a825a44dd1d33540108"
+  },
+  "data_files": [
+    "data/extended/tier2_binary.csv"
+  ],
+  "env_summary": {},
+  "experiment": "E2_outer_loco",
+  "git": {
+    "branch": "main",
+    "commit": "118f9036447c94540d74632d377f2aae3ba034ea",
+    "dirty": true,
+    "repo": true,
+    "short": "118f903"
+  },
+  "notes": "E2 Phase 2.3.X \u2014 Qwen-max driving Harness, outer_anion=O",
+  "pkg_versions": {
+    "anthropic": "0.84.0",
+    "numpy": "2.4.2",
+    "pandas": "3.0.0",
+    "pysr": "1.5.10",
+    "sklearn": "1.8.0"
+  },
+  "platform": "macOS-15.3.1-arm64-arm-64bit-Mach-O",
+  "python_version": "3.14.3",
+  "run_id": "fold_O_seed42_qwen",
+  "run_seed": 42,
+  "timestamp_end": "2026-04-24T08:19:25.199427+00:00",
+  "timestamp_start": "2026-04-24T08:15:26.015564+00:00"
+}

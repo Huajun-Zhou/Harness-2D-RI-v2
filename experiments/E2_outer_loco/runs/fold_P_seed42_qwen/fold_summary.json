@@ -1,0 +1,286 @@
+{
+  "outer_anion": "P",
+  "run_seed": 42,
+  "inner_split_seed": 1918769281,
+  "n_outer_test": 3,
+  "n_outer_pool": 190,
+  "n_inner_train": 152,
+  "n_inner_screen": 38,
+  "target": "cauchy_A",
+  "headline": {
+    "expression": "cube(((x1 / ((exp(cbrt((inv(x2) + -8.337388) + x1) * x1) + x0) + -10.715291)) * 1.0542902) + 1.211848) - x4",
+    "complexity": 23,
+    "features_used": [
+      "atomic_number_M",
+      "d_electron_count",
+      "monolayer_thickness",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "inner_train_rmse": 0.5501349834358836,
+    "inner_screen_rmse": 0.343491628160676,
+    "inner_screen_r2": 0.6373067760853439
+  },
+  "outer_test_metrics": {
+    "rmse": 1.5791975571840078,
+    "mae": 0.9939618349014028,
+    "r2": -0.49873187855418344,
+    "n_finite": 3,
+    "n_total": 3,
+    "finite_fraction": 1.0
+  },
+  "pareto_outer_evals": [
+    {
+      "expression": "square((2.204329 / (x0 + -26.724386)) + -0.1961856) - -1.6938286",
+      "complexity": 10,
+      "features_used": [
+        "atomic_number_M",
+        "d_electron_count",
+        "monolayer_thickness",
+        "atomic_number_X",
+        "bond_polarity"
+      ],
+      "inner_train_rmse": 0.6901091580322638,
+      "inner_screen_rmse": 0.4453607355467087,
+      "outer_rmse": 0.289457707433686,
+      "outer_mae": 0.2532748428366803,
+      "outer_r2": 0.9496474749594523,
+      "outer_n_finite": 3,
+      "outer_n_total": 3
+    },
+    {
+      "expression": "square(2.2646875 / (x0 + -26.517467)) + 1.6962707",
+      "complexity": 8,
+      "features_used": [
+        "atomic_number_M",
+        "d_electron_count",
+        "monolayer_thickness",
+        "atomic_number_X",
+        "bond_polarity"
+      ],
+      "inner_train_rmse": 0.7066036866589361,
+      "inner_screen_rmse": 0.462327723045711,
+      "outer_rmse": 0.29011093338583915,
+      "outer_mae": 0.25833461998077617,
+      "outer_r2": 0.9494199550913657,
+      "outer_n_finite": 3,
+      "outer_n_total": 3
+    },
+    {
+      "expression": "2.2423792 - inv(x2)",
+      "complexity": 4,
+      "features_used": [
+        "atomic_number_M",
+        "d_electron_count",
+        "monolayer_thickness",
+        "atomic_number_X",
+        "bond_polarity"
+      ],
+      "inner_train_rmse": 0.8811145441995609,
+      "inner_screen_rmse": 0.535591779444576,
+      "outer_rmse": 1.8763953883352074,
+      "outer_mae": 1.2274696003751933,
+      "outer_r2": -1.1159223782847634,
+      "outer_n_finite": 3,
+      "outer_n_total": 3
+    },
+    {
+      "expression": "1.9069618",
+      "complexity": 1,
+      "features_used": [
+        "atomic_number_M",
+        "d_electron_count",
+        "monolayer_thickness",
+        "atomic_number_X",
+        "bond_polarity"
+      ],
+      "inner_train_rmse": 0.8966232765214162,
+      "inner_screen_rmse": 0.5747440626230638,
+      "outer_rmse": 1.4930005373383564,
+      "outer_mae": 0.9674922610536688,
+      "outer_r2": -0.33958706700125285,
+      "outer_n_finite": 3,
+      "outer_n_total": 3
+    },
+    {
+      "expression": "cube(((x1 / ((exp(cbrt((inv(x2) + -8.337388) + x1) * x1) + x0) + -10.715291)) * 1.0542902) + 1.211848) - x4",
+      "complexity": 23,
+      "features_used": [
+        "atomic_number_M",
+        "d_electron_count",
+        "monolayer_thickness",
+        "atomic_number_X",
+        "bond_polarity"
+      ],
+      "inner_train_rmse": 0.5501349834358836,
+      "inner_screen_rmse": 0.343491628160676,
+      "outer_rmse": 1.5791975571840078,
+      "outer_mae": 0.9939618349014028,
+      "outer_r2": -0.49873187855418344,
+      "outer_n_finite": 3,
+      "outer_n_total": 3
+    },
+    {
+      "expression": "cube((x1 / ((cube(exp(x1 + -7.7173)) + -11.426209) + x0)) + 1.1558634)",
+      "complexity": 14,
+      "features_used": [
+        "atomic_number_M",
+        "d_electron_count",
+        "monolayer_thickness",
+        "atomic_number_X",
+        "bond_polarity"
+      ],
+      "inner_train_rmse": 0.5989718941653273,
+      "inner_screen_rmse": 0.39539279024041735,
+      "outer_rmse": 0.378724623982786,
+      "outer_mae": 0.31703445771123945,
+      "outer_r2": 0.9138018184276546,
+      "outer_n_finite": 3,
+      "outer_n_total": 3
+    },
+    {
+      "expression": "cube((x1 / ((x0 + -12.721577) + exp(x1 + -5.7116814))) + 1.1419139)",
+      "complexity": 13,
+      "features_used": [
+        "atomic_number_M",
+        "d_electron_count",
+        "monolayer_thickness",
+        "atomic_number_X",
+        "bond_polarity"
+      ],
+      "inner_train_rmse": 0.6348478085336674,
+      "inner_screen_rmse": 0.42647638294679063,
+      "outer_rmse": 0.8251250338537085,
+      "outer_mae": 0.6282454140868009,
+      "outer_r2": 0.5908424729156092,
+      "outer_n_finite": 3,
+      "outer_n_total": 3
+    },
+    {
+      "expression": "cube(exp((x1 / (x0 + exp(x1 + -5.1880355))) + 0.16710877))",
+      "complexity": 12,
+      "features_used": [
+        "atomic_number_M",
+        "d_electron_count",
+        "monolayer_thickness",
+        "atomic_number_X",
+        "bond_polarity"
+      ],
+      "inner_train_rmse": 0.6848963936246124,
+      "inner_screen_rmse": 0.42816261105143133,
+      "outer_rmse": 0.9639434521560517,
+      "outer_mae": 0.6610827415250027,
+      "outer_r2": 0.4415887834377924,
+      "outer_n_finite": 3,
+      "outer_n_total": 3
+    },
+    {
+      "expression": "exp((((x1 / -0.055289548) + exp(x1 * 0.5178192)) / (x0 * -3.712823)) + 0.4415529)",
+      "complexity": 15,
+      "features_used": [
+        "atomic_number_M",
+        "d_electron_count",
+        "monolayer_thickness",
+        "atomic_number_X",
+        "bond_polarity"
+      ],
+      "inner_train_rmse": 0.6074401040431887,
+      "inner_screen_rmse": 0.37867081194177865,
+      "outer_rmse": 0.6534726640881054,
+      "outer_mae": 0.5046159144882352,
+      "outer_r2": 0.7433709194683874,
+      "outer_n_finite": 3,
+      "outer_n_total": 3
+    },
+    {
+      "expression": "(x1 / (x0 - 20.153513)) + 1.6502185",
+      "complexity": 7,
+      "features_used": [
+        "atomic_number_M",
+        "d_electron_count",
+        "monolayer_thickness",
+        "atomic_number_X",
+        "bond_polarity"
+      ],
+      "inner_train_rmse": 0.7398934112424572,
+      "inner_screen_rmse": 0.5286605932173121,
+      "outer_rmse": 1.0531393194245664,
+      "outer_mae": 0.7132185105114238,
+      "outer_r2": 0.33346543904703185,
+      "outer_n_finite": 3,
+      "outer_n_total": 3
+    },
+    {
+      "expression": "2.2423792 - inv(x2)",
+      "complexity": 4,
+      "features_used": [
+        "atomic_number_M",
+        "d_electron_count",
+        "monolayer_thickness",
+        "atomic_number_X",
+        "bond_polarity"
+      ],
+      "inner_train_rmse": 0.8811145441995609,
+      "inner_screen_rmse": 0.535591779444576,
+      "outer_rmse": 1.8763953883352074,
+      "outer_mae": 1.2274696003751933,
+      "outer_r2": -1.1159223782847634,
+      "outer_n_finite": 3,
+      "outer_n_total": 3
+    },
+    {
+      "expression": "2.2423792 - inv(x2)",
+      "complexity": 4,
+      "features_used": [
+        "atomic_number_M",
+        "d_electron_count",
+        "monolayer_thickness",
+        "atomic_number_X",
+        "bond_polarity"
+      ],
+      "inner_train_rmse": 0.8811145441995609,
+      "inner_screen_rmse": 0.535591779444576,
+      "outer_rmse": 1.8763953883352074,
+      "outer_mae": 1.2274696003751933,
+      "outer_r2": -1.1159223782847634,
+      "outer_n_finite": 3,
+      "outer_n_total": 3
+    },
+    {
+      "expression": "2.1378992 - x4",
+      "complexity": 3,
+      "features_used": [
+        "atomic_number_M",
+        "d_electron_count",
+        "monolayer_thickness",
+        "atomic_number_X",
+        "bond_polarity"
+      ],
+      "inner_train_rmse": 0.8945815558125486,
+      "inner_screen_rmse": 0.5525770510031771,
+      "outer_rmse": 1.4091664583667853,
+      "outer_mae": 0.9839098918787137,
+      "outer_r2": -0.19337136482646677,
+      "outer_n_finite": 3,
+      "outer_n_total": 3
+    },
+    {
+      "expression": "sqrt(2.6553257 + cbrt(x1))",
+      "complexity": 5,
+      "features_used": [
+        "atomic_number_M",
+        "d_electron_count",
+        "monolayer_thickness",
+        "atomic_number_X",
+        "bond_polarity"
+      ],
+      "inner_train_rmse": 0.8556117109997969,
+      "inner_screen_rmse": 0.5320141834263848,
+      "outer_rmse": 1.3472805825211809,
+      "outer_mae": 0.8839394013774315,
+      "outer_r2": -0.09085523260776074,
+      "outer_n_finite": 3,
+      "outer_n_total": 3
+    }
+  ]
+}

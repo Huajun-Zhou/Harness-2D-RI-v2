@@ -1,0 +1,82 @@
+[
+  {
+    "expression": "(((x2 / (square(exp(x4 * square(square(square(x2 * 0.15542465))))) + x0)) / x0) * 289.19247) + 1.5700461",
+    "complexity": 20,
+    "train_rmse": 0.5924014010786943,
+    "test_rmse": 0.35717504146096596,
+    "r2": -0.021473109816733782,
+    "features": [
+      "atomic_number_M",
+      "Z_ratio",
+      "d_electron_count",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 1,
+    "physics_valid": true
+  },
+  {
+    "expression": "2.2087479 - x4",
+    "complexity": 3,
+    "train_rmse": 0.9371851684699241,
+    "test_rmse": 0.40920660009027354,
+    "r2": -0.34075674475777396,
+    "features": [
+      "atomic_number_M",
+      "Z_ratio",
+      "d_electron_count",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 1,
+    "physics_valid": true
+  },
+  {
+    "expression": "inv(log(log(((x0 + cube(x1)) * 0.06422611) + square(6.6251526 - x2)))) + 0.88533866",
+    "complexity": 16,
+    "train_rmse": 0.6432220145486316,
+    "test_rmse": 0.3584919835043658,
+    "r2": -0.029019554633468392,
+    "features": [
+      "atomic_number_M",
+      "Z_ratio",
+      "d_electron_count",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 3,
+    "physics_valid": true
+  },
+  {
+    "expression": "((x2 * ((x2 + -10.10023) * ((x2 * -11.166926) / x0))) / x0) - -1.6166569",
+    "complexity": 15,
+    "train_rmse": 0.6129090470861072,
+    "test_rmse": 0.40808609916413197,
+    "r2": -0.3334242025760614,
+    "features": [
+      "atomic_number_M",
+      "Z_ratio",
+      "d_electron_count",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 4,
+    "physics_valid": true
+  },
+  {
+    "expression": "1.9809293",
+    "complexity": 1,
+    "train_rmse": 0.9407563233909193,
+    "test_rmse": 0.4472816941075299,
+    "r2": -0.6018689345022614,
+    "features": [
+      "atomic_number_M",
+      "Z_ratio",
+      "d_electron_count",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 8,
+    "physics_valid": true
+  }
+]

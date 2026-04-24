@@ -1,0 +1,20 @@
+{
+  "timestamp": "20260424_194230",
+  "target": "cauchy_A",
+  "best_formula": "sqrt(cube(inv(exp(inv(cbrt(22.329031 - x4)))) - x1) + 1.8745058)",
+  "metrics": {
+    "train_rmse": 0.6863673360526418,
+    "test_rmse": 0.49485650501465833,
+    "r2": 0.4616758022919266,
+    "complexity": 13
+  },
+  "features_used": [
+    "atomic_number_X",
+    "bond_polarity",
+    "d_electron_count",
+    "electronegativity_diff",
+    "atomic_number_M"
+  ],
+  "experience_pool_size": 10,
+  "pareto_front_size": 7
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "expression": "1.8949608",
+    "complexity": 1,
+    "train_rmse": 0.9509909568444906,
+    "test_rmse": 0.7684611997058407,
+    "r2": -0.00866032268899497,
+    "features": [
+      "d_electron_count",
+      "atomic_number_M",
+      "monolayer_thickness",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 1,
+    "physics_valid": true
+  },
+  {
+    "expression": "(x0 / (x1 - 20.17491)) + 1.6368724",
+    "complexity": 7,
+    "train_rmse": 0.7727896220835266,
+    "test_rmse": 0.5799831712302834,
+    "r2": 0.42544470275615587,
+    "features": [
+      "d_electron_count",
+      "atomic_number_M",
+      "monolayer_thickness",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 2,
+    "physics_valid": true
+  },
+  {
+    "expression": "1.8949608",
+    "complexity": 1,
+    "train_rmse": 0.9509909568444906,
+    "test_rmse": 0.7684611997058407,
+    "r2": -0.00866032268899497,
+    "features": [
+      "d_electron_count",
+      "atomic_number_M",
+      "monolayer_thickness",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 2,
+    "physics_valid": true
+  },
+  {
+    "expression": "(x0 / x1) + 1.8165008",
+    "complexity": 5,
+    "train_rmse": 0.9105063975612692,
+    "test_rmse": 0.7252538827742012,
+    "r2": 0.10157635430827594,
+    "features": [
+      "d_electron_count",
+      "atomic_number_M",
+      "monolayer_thickness",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 3,
+    "physics_valid": true
+  },
+  {
+    "expression": "square(2.3384323 / (26.507915 - x1)) + 1.6535512",
+    "complexity": 8,
+    "train_rmse": 0.7146165405306542,
+    "test_rmse": 0.5706983195487983,
+    "r2": 0.44369336976368356,
+    "features": [
+      "d_electron_count",
+      "atomic_number_M",
+      "monolayer_thickness",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 4,
+    "physics_valid": true
+  },
+  {
+    "expression": "cbrt(x0 + 4.140107)",
+    "complexity": 4,
+    "train_rmse": 0.9167678768368795,
+    "test_rmse": 0.7477500616774371,
+    "r2": 0.0449767082367758,
+    "features": [
+      "d_electron_count",
+      "atomic_number_M",
+      "monolayer_thickness",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 4,
+    "physics_valid": true
+  },
+  {
+    "expression": "1.8949608",
+    "complexity": 1,
+    "train_rmse": 0.9509909568444906,
+    "test_rmse": 0.7684611997058407,
+    "r2": -0.00866032268899497,
+    "features": [
+      "d_electron_count",
+      "atomic_number_M",
+      "monolayer_thickness",
+      "atomic_number_X",
+      "bond_polarity"
+    ],
+    "round": 4,
+    "physics_valid": true
+  }
+]
