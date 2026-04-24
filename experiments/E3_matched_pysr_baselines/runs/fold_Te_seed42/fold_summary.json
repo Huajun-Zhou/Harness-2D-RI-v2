@@ -1,0 +1,330 @@
+{
+  "outer_anion": "Te",
+  "run_seed": 42,
+  "inner_split_seed": 77942894,
+  "n_outer_test": 8,
+  "n_inner_train": 148,
+  "n_inner_screen": 37,
+  "n_seeds": 5,
+  "n_rounds_per_seed": 10,
+  "seed_runs": [
+    {
+      "seed_idx": 0,
+      "n_candidates_pooled": 179,
+      "V1_train": {
+        "expression": "square(-1.2487872 - ((d_electron_count * (2.5402293 / (cube(cube(radius_ratio / (9.601935 - d_electron_count))) + (atomic_number_M - exp(radius_ratio))))) / 1.022411))",
+        "complexity": 21,
+        "train_rmse": 0.5059325648799056,
+        "inner_screen_rmse": 0.5191997227141114,
+        "stable_frac_full": 1.0,
+        "outer_rmse": 0.7545684524360948,
+        "outer_mae": 0.5857467708739482,
+        "outer_r2": -1.5142898492675303,
+        "outer_n_finite": 8,
+        "outer_n_total": 8
+      },
+      "V2_screen": {
+        "expression": "sqrt(cube(d_electron_count / ((atomic_number_M * ((d_electron_count / (((d_electron_count * -0.14342926) - -1.4211981) * atomic_number_M)) + (-2.3689494 - d_electron_count))) * -0.012903164)) + 2.5343108)",
+        "complexity": 23,
+        "train_rmse": 0.5923183559518274,
+        "inner_screen_rmse": 0.35389946349187495,
+        "stable_frac_full": 1.0,
+        "outer_rmse": 0.7202699745646352,
+        "outer_mae": 0.543683124881758,
+        "outer_r2": -1.2909134192617162,
+        "outer_n_finite": 8,
+        "outer_n_total": 8
+      },
+      "V3_cplx_capped": {
+        "expression": "inv(square(square(d_electron_count + -6.756856) + -2.2839687)) + sqrt(bond_length_MX)",
+        "complexity": 11,
+        "train_rmse": 0.6675310897535697,
+        "inner_screen_rmse": 0.530226112331337,
+        "stable_frac_full": 1.0,
+        "outer_rmse": 0.7926924711236252,
+        "outer_mae": 0.6685362612681314,
+        "outer_r2": -1.7747733892860191,
+        "outer_n_finite": 8,
+        "outer_n_total": 8
+      },
+      "V4_stability_only": {
+        "expression": "sqrt(cube(d_electron_count / ((atomic_number_M * ((d_electron_count / (((d_electron_count * -0.14342926) - -1.4211981) * atomic_number_M)) + (-2.3689494 - d_electron_count))) * -0.012903164)) + 2.5343108)",
+        "complexity": 23,
+        "train_rmse": 0.5923183559518274,
+        "inner_screen_rmse": 0.35389946349187495,
+        "stable_frac_full": 1.0,
+        "outer_rmse": 0.7202699745646352,
+        "outer_mae": 0.543683124881758,
+        "outer_r2": -1.2909134192617162,
+        "outer_n_finite": 8,
+        "outer_n_total": 8
+      }
+    },
+    {
+      "seed_idx": 1,
+      "n_candidates_pooled": 173,
+      "V1_train": {
+        "expression": "sqrt(((((lattice_constant_a / (ionization_energy_M - square(electronegativity_M))) * d_electron_count) * ((-0.58710825 - cbrt(cbrt(sqrt(atomic_number_M) + -5.3189974))) + atomic_radius_M)) + bond_length_MX) - bond_polarity)",
+        "complexity": 24,
+        "train_rmse": 0.5342482683202138,
+        "inner_screen_rmse": 0.3791934473553135,
+        "stable_frac_full": 1.0,
+        "outer_rmse": 0.6211065818085277,
+        "outer_mae": 0.4781615384874682,
+        "outer_r2": -0.7035320826785378,
+        "outer_n_finite": 8,
+        "outer_n_total": 8
+      },
+      "V2_screen": {
+        "expression": "sqrt((bond_length_MX + square(d_electron_count / cbrt(exp(((atomic_number_M - d_electron_count) / (11.095092 - d_electron_count)) / bond_length_MX)))) - bond_polarity)",
+        "complexity": 19,
+        "train_rmse": 0.5624626896733944,
+        "inner_screen_rmse": 0.3597096351867937,
+        "stable_frac_full": 1.0,
+        "outer_rmse": 0.7243353473173457,
+        "outer_mae": 0.5919350420491426,
+        "outer_r2": -1.3168473076057778,
+        "outer_n_finite": 8,
+        "outer_n_total": 8
+      },
+      "V3_cplx_capped": {
+        "expression": "(d_electron_count / cbrt(exp(atomic_number_M / (13.71975 - d_electron_count)))) + 1.5414671",
+        "complexity": 11,
+        "train_rmse": 0.6118612182309507,
+        "inner_screen_rmse": 0.538641787450849,
+        "stable_frac_full": 1.0,
+        "outer_rmse": 0.7310705123354063,
+        "outer_mae": 0.5916152870739992,
+        "outer_r2": -1.360133602529244,
+        "outer_n_finite": 8,
+        "outer_n_total": 8
+      },
+      "V4_stability_only": {
+        "expression": "sqrt((bond_length_MX + square(d_electron_count / cbrt(exp(((atomic_number_M - d_electron_count) / (11.095092 - d_electron_count)) / bond_length_MX)))) - bond_polarity)",
+        "complexity": 19,
+        "train_rmse": 0.5624626896733944,
+        "inner_screen_rmse": 0.3597096351867937,
+        "stable_frac_full": 1.0,
+        "outer_rmse": 0.7243353473173457,
+        "outer_mae": 0.5919350420491426,
+        "outer_r2": -1.3168473076057778,
+        "outer_n_finite": 8,
+        "outer_n_total": 8
+      }
+    },
+    {
+      "seed_idx": 2,
+      "n_candidates_pooled": 171,
+      "V1_train": {
+        "expression": "sqrt(bond_length_MX) + ((d_electron_count * (cube(electronegativity_M) * (((1861.2953 - (electronegativity_diff * d_electron_count)) - (cube(d_electron_count) * 1.9067926)) - cube(cube(electronegativity_diff))))) / cube(atomic_number_M))",
+        "complexity": 25,
+        "train_rmse": 0.529327589900448,
+        "inner_screen_rmse": 0.4177566067418478,
+        "stable_frac_full": 1.0,
+        "outer_rmse": 0.7332313843209549,
+        "outer_mae": 0.6003503433478776,
+        "outer_r2": -1.374106218350092,
+        "outer_n_finite": 8,
+        "outer_n_total": 8
+      },
+      "V2_screen": {
+        "expression": "1.8338835 - ((electronegativity_diff * 0.26341513) + (((lattice_constant_a * ((1.9928899 - (d_electron_count * 0.19958122)) / -1.0387233)) / (atomic_number_M - (d_electron_count - (d_electron_count * -1.827654)))) * d_electron_count))",
+        "complexity": 25,
+        "train_rmse": 0.5317711287276635,
+        "inner_screen_rmse": 0.3778155560559189,
+        "stable_frac_full": 1.0,
+        "outer_rmse": 0.5968187524945759,
+        "outer_mae": 0.43741133939999044,
+        "outer_r2": -0.5729067466265576,
+        "outer_n_finite": 8,
+        "outer_n_total": 8
+      },
+      "V3_cplx_capped": {
+        "expression": "(lattice_constant_a / square(atomic_number_M - 26.463812)) + 1.7001969",
+        "complexity": 8,
+        "train_rmse": 0.684876189979186,
+        "inner_screen_rmse": 0.4553359569650989,
+        "stable_frac_full": 1.0,
+        "outer_rmse": 0.7136547660624327,
+        "outer_mae": 0.5687975227052615,
+        "outer_r2": -1.2490255808711739,
+        "outer_n_finite": 8,
+        "outer_n_total": 8
+      },
+      "V4_stability_only": {
+        "expression": "1.8338835 - ((electronegativity_diff * 0.26341513) + (((lattice_constant_a * ((1.9928899 - (d_electron_count * 0.19958122)) / -1.0387233)) / (atomic_number_M - (d_electron_count - (d_electron_count * -1.827654)))) * d_electron_count))",
+        "complexity": 25,
+        "train_rmse": 0.5317711287276635,
+        "inner_screen_rmse": 0.3778155560559189,
+        "stable_frac_full": 1.0,
+        "outer_rmse": 0.5968187524945759,
+        "outer_mae": 0.43741133939999044,
+        "outer_r2": -0.5729067466265576,
+        "outer_n_finite": 8,
+        "outer_n_total": 8
+      }
+    },
+    {
+      "seed_idx": 3,
+      "n_candidates_pooled": 190,
+      "V1_train": {
+        "expression": "1.5286267 - (d_electron_count / (((atomic_number_M + cube(exp(exp(cube(exp(exp(-1.7851884 / radius_ratio))) + -5.1376867) + (d_electron_count + -7.7897058)))) + -12.648123) / -5.5055118))",
+        "complexity": 25,
+        "train_rmse": 0.5203573664082825,
+        "inner_screen_rmse": 0.37087646601250635,
+        "stable_frac_full": 1.0,
+        "outer_rmse": 0.7123145276142318,
+        "outer_mae": 0.5492875769199359,
+        "outer_r2": -1.240586205570474,
+        "outer_n_finite": 8,
+        "outer_n_total": 8
+      },
+      "V2_screen": {
+        "expression": "1.5217804 - (d_electron_count / ((exp(cube(d_electron_count + -7.3713408)) + atomic_number_M) / (Z_ratio + -10.47752)))",
+        "complexity": 15,
+        "train_rmse": 0.581814913711316,
+        "inner_screen_rmse": 0.3632277203828512,
+        "stable_frac_full": 1.0,
+        "outer_rmse": 0.7283445403124132,
+        "outer_mae": 0.56202342236282,
+        "outer_r2": -1.3425657664787525,
+        "outer_n_finite": 8,
+        "outer_n_total": 8
+      },
+      "V3_cplx_capped": {
+        "expression": "cbrt(cbrt(cbrt(-0.16256018 + inv(28.165749 - atomic_number_M)))) + 2.6289282",
+        "complexity": 11,
+        "train_rmse": 0.6024465087001666,
+        "inner_screen_rmse": 0.3850391101803016,
+        "stable_frac_full": 1.0,
+        "outer_rmse": 0.7267481774348263,
+        "outer_mae": 0.5768224051548215,
+        "outer_r2": -1.3323082944496027,
+        "outer_n_finite": 8,
+        "outer_n_total": 8
+      },
+      "V4_stability_only": {
+        "expression": "1.5217804 - (d_electron_count / ((exp(cube(d_electron_count + -7.3713408)) + atomic_number_M) / (Z_ratio + -10.47752)))",
+        "complexity": 15,
+        "train_rmse": 0.581814913711316,
+        "inner_screen_rmse": 0.3632277203828512,
+        "stable_frac_full": 1.0,
+        "outer_rmse": 0.7283445403124132,
+        "outer_mae": 0.56202342236282,
+        "outer_r2": -1.3425657664787525,
+        "outer_n_finite": 8,
+        "outer_n_total": 8
+      }
+    },
+    {
+      "seed_idx": 4,
+      "n_candidates_pooled": 182,
+      "V1_train": {
+        "expression": "exp(sqrt(sqrt(sqrt((monolayer_thickness / square(d_electron_count + -6.728114)) / square((cbrt(atomic_number_M) - ((Z_ratio + 25.001904) - atomic_number_M)) * (electronegativity_diff * 0.30196044))))))",
+        "complexity": 24,
+        "train_rmse": 0.5227003089059187,
+        "inner_screen_rmse": 0.6355768492051166,
+        "stable_frac_full": 1.0,
+        "outer_rmse": 0.6924484675578397,
+        "outer_mae": 0.5338789007706348,
+        "outer_r2": -1.1173515497301731,
+        "outer_n_finite": 8,
+        "outer_n_total": 8
+      },
+      "V2_screen": {
+        "expression": "sqrt((((((d_electron_count * -2.3429286) + 23.560455) * (d_electron_count * lattice_constant_a)) * (d_electron_count / atomic_number_M)) * (d_electron_count / atomic_number_M)) + bond_length_MX)",
+        "complexity": 20,
+        "train_rmse": 0.5656387204906134,
+        "inner_screen_rmse": 0.3913203044171775,
+        "stable_frac_full": 1.0,
+        "outer_rmse": 0.6576755655939084,
+        "outer_mae": 0.5184629470884135,
+        "outer_r2": -0.9100356272990553,
+        "outer_n_finite": 8,
+        "outer_n_total": 8
+      },
+      "V3_cplx_capped": {
+        "expression": "cbrt(exp(inv(28.479025 - atomic_number_M))) * 1.8818636",
+        "complexity": 8,
+        "train_rmse": 0.7990546528687498,
+        "inner_screen_rmse": 0.42823312222814414,
+        "stable_frac_full": 1.0,
+        "outer_rmse": 0.6072811551664931,
+        "outer_mae": 0.4791006377988256,
+        "outer_r2": -0.6285371242769968,
+        "outer_n_finite": 8,
+        "outer_n_total": 8
+      },
+      "V4_stability_only": {
+        "expression": "sqrt((((((d_electron_count * -2.3429286) + 23.560455) * (d_electron_count * lattice_constant_a)) * (d_electron_count / atomic_number_M)) * (d_electron_count / atomic_number_M)) + bond_length_MX)",
+        "complexity": 20,
+        "train_rmse": 0.5656387204906134,
+        "inner_screen_rmse": 0.3913203044171775,
+        "stable_frac_full": 1.0,
+        "outer_rmse": 0.6576755655939084,
+        "outer_mae": 0.5184629470884135,
+        "outer_r2": -0.9100356272990553,
+        "outer_n_finite": 8,
+        "outer_n_total": 8
+      }
+    }
+  ],
+  "policy_summary": {
+    "V1_train": {
+      "n_seeds_success": 5,
+      "mean_outer_rmse": 0.7027338827475298,
+      "std_outer_rmse": 0.05117986664034097,
+      "mean_complexity": 23.8,
+      "std_complexity": 1.6431676725154982,
+      "per_seed_outer_rmse": [
+        0.7545684524360948,
+        0.6211065818085277,
+        0.7332313843209549,
+        0.7123145276142318,
+        0.6924484675578397
+      ]
+    },
+    "V2_screen": {
+      "n_seeds_success": 5,
+      "mean_outer_rmse": 0.6854888360565756,
+      "std_outer_rmse": 0.05742680592074415,
+      "mean_complexity": 20.4,
+      "std_complexity": 3.847076812334269,
+      "per_seed_outer_rmse": [
+        0.7202699745646352,
+        0.7243353473173457,
+        0.5968187524945759,
+        0.7283445403124132,
+        0.6576755655939084
+      ]
+    },
+    "V3_cplx_capped": {
+      "n_seeds_success": 5,
+      "mean_outer_rmse": 0.7142894164245568,
+      "std_outer_rmse": 0.06714729266802463,
+      "mean_complexity": 9.8,
+      "std_complexity": 1.6431676725154984,
+      "per_seed_outer_rmse": [
+        0.7926924711236252,
+        0.7310705123354063,
+        0.7136547660624327,
+        0.7267481774348263,
+        0.6072811551664931
+      ]
+    },
+    "V4_stability_only": {
+      "n_seeds_success": 5,
+      "mean_outer_rmse": 0.6854888360565756,
+      "std_outer_rmse": 0.05742680592074415,
+      "mean_complexity": 20.4,
+      "std_complexity": 3.847076812334269,
+      "per_seed_outer_rmse": [
+        0.7202699745646352,
+        0.7243353473173457,
+        0.5968187524945759,
+        0.7283445403124132,
+        0.6576755655939084
+      ]
+    }
+  }
+}

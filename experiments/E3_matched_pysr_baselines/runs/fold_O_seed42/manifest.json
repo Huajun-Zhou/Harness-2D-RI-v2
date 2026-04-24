@@ -1,0 +1,48 @@
+{
+  "cmdline": [
+    "harness_runner.py",
+    "--experiment",
+    "E3_matched_pysr_baselines",
+    "--config",
+    "experiments/E3_matched_pysr_baselines/configs/fold_O.yaml",
+    "--run-seed",
+    "42",
+    "--run-id",
+    "fold_O_seed42",
+    "--notes",
+    "E3 Phase 2.3.d production fold, outer_anion=O"
+  ],
+  "config_path": "/Users/ikun/Desktop/Harness-2DTMDs/experiments/E3_matched_pysr_baselines/configs/fold_O.yaml",
+  "config_sha256": "5d3d344fd1b5c35139855a221106fd44ad43ca3367b4beedb7df5176238bf0cc",
+  "data": {
+    "data/extended/tier2_binary.csv": "cc50715bc68e198debe6b15ed3c6334337e6db5508cb2a825a44dd1d33540108",
+    "data/extended/tier3_binary_plus_ternary.csv": "c593a8309c4d861ed19016e25a2da1c5a204cac7c95770c17c8622f1cc5a99b1"
+  },
+  "data_files": [
+    "data/extended/tier2_binary.csv",
+    "data/extended/tier3_binary_plus_ternary.csv"
+  ],
+  "env_summary": {},
+  "experiment": "E3_matched_pysr_baselines",
+  "git": {
+    "branch": "main",
+    "commit": "a7df94b864de87fd9b41b8802168f0c71e417a50",
+    "dirty": true,
+    "repo": true,
+    "short": "a7df94b"
+  },
+  "notes": "E3 Phase 2.3.d production fold, outer_anion=O",
+  "pkg_versions": {
+    "anthropic": "0.84.0",
+    "numpy": "2.4.2",
+    "pandas": "3.0.0",
+    "pysr": "1.5.10",
+    "sklearn": "1.8.0"
+  },
+  "platform": "macOS-15.3.1-arm64-arm-64bit-Mach-O",
+  "python_version": "3.14.3",
+  "run_id": "fold_O_seed42",
+  "run_seed": 42,
+  "timestamp_end": "2026-04-24T07:03:07.875494+00:00",
+  "timestamp_start": "2026-04-24T06:56:47.618530+00:00"
+}

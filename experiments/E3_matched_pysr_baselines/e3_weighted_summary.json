@@ -1,0 +1,22 @@
+{
+  "n_folds": 10,
+  "per_policy": {
+    "V1_train": {
+      "weighted_outer_rmse": 0.7041389507622093,
+      "mean_outer_rmse": 0.7988502535140212
+    },
+    "V2_screen": {
+      "weighted_outer_rmse": 0.7414734323063706,
+      "mean_outer_rmse": 0.7484649684058667
+    },
+    "V3_cplx_capped": {
+      "weighted_outer_rmse": 0.7347198243268104,
+      "mean_outer_rmse": 0.7416767280226458
+    },
+    "V4_stability_only": {
+      "weighted_outer_rmse": 0.7414734323063706,
+      "mean_outer_rmse": 0.7484649684058667
+    }
+  },
+  "harness_weighted_outer_rmse": 0.7613223753640838
+}
