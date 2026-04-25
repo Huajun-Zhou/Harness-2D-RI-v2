@@ -27,7 +27,7 @@ Vanilla PySR run under the exact E2 outer-LOCO partitioning, but with only the `
 
 Vanilla PySR on all 20 features, held-out metal as the test slice. Restricted to metals with N ≥ 5 (18 of 48 metals; total outer N = 130).
 
-**Weighted outer RMSE: 0.6861** (weighted across 18 held-out metals).
+**Weighted outer RMSE: 0.6747** (weighted across 18 held-out metals).
 
 | metal | N_outer | RMSE |
 |---|---|---|
@@ -38,11 +38,11 @@ Vanilla PySR on all 20 features, held-out metal as the test slice. Restricted to
 | Sn | 10 | 0.7220 |
 | Pd | 5 | 0.6837 |
 | Ag | 6 | 0.5326 |
-| Cd | 8 | 0.5221 |
 | Zr | 7 | 0.4982 |
 | B | 7 | 0.4638 |
 | Al | 7 | 0.4122 |
 | Hf | 5 | 0.3873 |
+| Cd | 8 | 0.3366 |
 | Pt | 6 | 0.3352 |
 | Bi | 9 | 0.3268 |
 | Ga | 5 | 0.3062 |

@@ -87,17 +87,17 @@
       "seed_runs": [
         {
           "seed_idx": 0,
-          "expression": "exp(square(0.22551508 + (cube(inv(atomic_number_M) / 0.061205223) * sqrt(d_electron_count)))) * sqrt(bond_length_MX)",
-          "complexity": 15,
-          "inner_screen_rmse": 0.6501083274937993,
-          "outer_rmse": 0.5220547221271553,
-          "outer_mae": 0.5196314355896426,
-          "outer_r2": -40.22361852458621,
+          "expression": "((d_electron_count * 11.790678) * ((d_electron_count * ((10.060447 - d_electron_count) / atomic_number_M)) / atomic_number_M)) + sqrt(bond_length_MX)",
+          "complexity": 16,
+          "inner_screen_rmse": 0.6121408708080502,
+          "outer_rmse": 0.33661426042590636,
+          "outer_mae": 0.3323202451288927,
+          "outer_r2": -16.138747281327586,
           "outer_n_finite": 8,
           "outer_n_total": 8
         }
       ],
-      "mean_outer_rmse": 0.5220547221271553,
+      "mean_outer_rmse": 0.33661426042590636,
       "std_outer_rmse": 0.0
     },
     {
@@ -348,6 +348,6 @@
       "std_outer_rmse": 0.0
     }
   ],
-  "weighted_outer_rmse": 0.686086487292078,
+  "weighted_outer_rmse": 0.6746747665720011,
   "total_outer_N": 130
 }

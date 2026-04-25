@@ -71,7 +71,7 @@
   "E5_2_lomo": {
     "min_metal_count": 5,
     "n_metals_evaluated": 18,
-    "weighted_outer_rmse": 0.686086487292078,
+    "weighted_outer_rmse": 0.6746747665720011,
     "total_outer_N": 130,
     "per_metal": [
       {
@@ -97,7 +97,7 @@
       {
         "metal": "Cd",
         "n_outer_test": 8,
-        "mean_outer_rmse": 0.5220547221271553
+        "mean_outer_rmse": 0.33661426042590636
       },
       {
         "metal": "Cr",
