@@ -1,0 +1,17 @@
+# E5.1 — Z_M-only PySR diagnostic.
+# Run vanilla PySR under the exact E2 outer-LOCO protocol but with only
+# the atomic_number_M column as input. Directly comparable to E3 V2_screen.
+mode: zm_only
+feature: atomic_number_M
+anions: [O, S, Se, Te, F, Cl, Br, I, N, P]
+n_seeds: 3
+n_rounds: 5
+data_csv: data/extended/tier2_binary.csv
+target: cauchy_A
+stability_range: [0.0, 20.0]
+pysr:
+  niterations: 50
+  populations: 40
+  population_size: 33
+  maxsize: 25
+  parsimony: 0.05

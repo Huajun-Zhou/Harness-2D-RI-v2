@@ -1,0 +1,353 @@
+{
+  "mode": "lomo",
+  "min_metal_count": 5,
+  "n_metals_evaluated": 18,
+  "n_seeds": 1,
+  "n_rounds": 5,
+  "per_metal": [
+    {
+      "metal": "Ag",
+      "n_outer_test": 6,
+      "seed_runs": [
+        {
+          "seed_idx": 0,
+          "expression": "((exp((cbrt(d_electron_count) * 36.85887) / atomic_number_M) + 13.465177) * 0.17925079) - cbrt(cbrt(cbrt(exp(exp(log(exp((d_electron_count * d_electron_count) / atomic_number_M)))))))",
+          "complexity": 24,
+          "inner_screen_rmse": 0.5857468294582239,
+          "outer_rmse": 0.5325889707553179,
+          "outer_mae": 0.526201785410664,
+          "outer_r2": -40.94350092836477,
+          "outer_n_finite": 6,
+          "outer_n_total": 6
+        }
+      ],
+      "mean_outer_rmse": 0.5325889707553179,
+      "std_outer_rmse": 0.0
+    },
+    {
+      "metal": "Al",
+      "n_outer_test": 7,
+      "seed_runs": [
+        {
+          "seed_idx": 0,
+          "expression": "cbrt(inv(Z_ratio * ((-0.76388955 - lattice_constant_a) - (d_electron_count + -12.756595)))) + cbrt(d_electron_count + cbrt(Z_ratio))",
+          "complexity": 17,
+          "inner_screen_rmse": 0.5276384735044909,
+          "outer_rmse": 0.4122227830553062,
+          "outer_mae": 0.33897521330439195,
+          "outer_r2": -0.7598320813561608,
+          "outer_n_finite": 7,
+          "outer_n_total": 7
+        }
+      ],
+      "mean_outer_rmse": 0.4122227830553062,
+      "std_outer_rmse": 0.0
+    },
+    {
+      "metal": "B",
+      "n_outer_test": 7,
+      "seed_runs": [
+        {
+          "seed_idx": 0,
+          "expression": "cbrt(electronegativity_M / square(cbrt(sqrt(sqrt(sqrt(atomic_number_M))) + -1.5017837)))",
+          "complexity": 11,
+          "inner_screen_rmse": 0.774595836983392,
+          "outer_rmse": 0.4638338478993349,
+          "outer_mae": 0.45941813153632427,
+          "outer_r2": -51.77198844760306,
+          "outer_n_finite": 7,
+          "outer_n_total": 7
+        }
+      ],
+      "mean_outer_rmse": 0.4638338478993349,
+      "std_outer_rmse": 0.0
+    },
+    {
+      "metal": "Bi",
+      "n_outer_test": 9,
+      "seed_runs": [
+        {
+          "seed_idx": 0,
+          "expression": "(((exp(0.45090225 / (d_electron_count - 10.006248)) * d_electron_count) / atomic_number_M) * 10.045173) + sqrt(bond_length_MX)",
+          "complexity": 15,
+          "inner_screen_rmse": 0.7174958016074747,
+          "outer_rmse": 0.3268450993553026,
+          "outer_mae": 0.20911248676794955,
+          "outer_r2": 0.09755431740502774,
+          "outer_n_finite": 9,
+          "outer_n_total": 9
+        }
+      ],
+      "mean_outer_rmse": 0.3268450993553026,
+      "std_outer_rmse": 0.0
+    },
+    {
+      "metal": "Cd",
+      "n_outer_test": 8,
+      "seed_runs": [
+        {
+          "seed_idx": 0,
+          "expression": "exp(square(0.22551508 + (cube(inv(atomic_number_M) / 0.061205223) * sqrt(d_electron_count)))) * sqrt(bond_length_MX)",
+          "complexity": 15,
+          "inner_screen_rmse": 0.6501083274937993,
+          "outer_rmse": 0.5220547221271553,
+          "outer_mae": 0.5196314355896426,
+          "outer_r2": -40.22361852458621,
+          "outer_n_finite": 8,
+          "outer_n_total": 8
+        }
+      ],
+      "mean_outer_rmse": 0.5220547221271553,
+      "std_outer_rmse": 0.0
+    },
+    {
+      "metal": "Cr",
+      "n_outer_test": 6,
+      "seed_runs": [
+        {
+          "seed_idx": 0,
+          "expression": "cbrt(exp(cbrt(exp(cbrt(inv(electronegativity_M - cbrt(d_electron_count - atomic_radius_M))) + cbrt(cbrt(d_electron_count))) - -0.9211483)))",
+          "complexity": 18,
+          "inner_screen_rmse": 0.3848639894703757,
+          "outer_rmse": 1.8564213200275073,
+          "outer_mae": 1.767688017265641,
+          "outer_r2": -0.5001897710884755,
+          "outer_n_finite": 6,
+          "outer_n_total": 6
+        }
+      ],
+      "mean_outer_rmse": 1.8564213200275073,
+      "std_outer_rmse": 0.0
+    },
+    {
+      "metal": "Ga",
+      "n_outer_test": 5,
+      "seed_runs": [
+        {
+          "seed_idx": 0,
+          "expression": "exp((square(d_electron_count / sqrt(cbrt(exp(d_electron_count - 4.5169044)) + -0.07006526)) / atomic_number_M) - -0.3691471)",
+          "complexity": 16,
+          "inner_screen_rmse": 0.5176385616055722,
+          "outer_rmse": 0.3062134393921383,
+          "outer_mae": 0.2753044400604592,
+          "outer_r2": -1.435892747197773,
+          "outer_n_finite": 5,
+          "outer_n_total": 5
+        }
+      ],
+      "mean_outer_rmse": 0.3062134393921383,
+      "std_outer_rmse": 0.0
+    },
+    {
+      "metal": "Hf",
+      "n_outer_test": 5,
+      "seed_runs": [
+        {
+          "seed_idx": 0,
+          "expression": "cube((d_electron_count / cbrt(Z_ratio * (atomic_number_X + radius_ratio))) * cbrt(2.1529272 - cbrt(d_electron_count))) + 1.5824099",
+          "complexity": 17,
+          "inner_screen_rmse": 0.6033724182037656,
+          "outer_rmse": 0.38734128097846976,
+          "outer_mae": 0.30709776603889233,
+          "outer_r2": -0.17766766239844034,
+          "outer_n_finite": 5,
+          "outer_n_total": 5
+        }
+      ],
+      "mean_outer_rmse": 0.38734128097846976,
+      "std_outer_rmse": 0.0
+    },
+    {
+      "metal": "Hg",
+      "n_outer_test": 5,
+      "seed_runs": [
+        {
+          "seed_idx": 0,
+          "expression": "(cube(d_electron_count / square(atomic_radius_M - 0.76338553)) / exp(d_electron_count)) + 1.560578",
+          "complexity": 12,
+          "inner_screen_rmse": 0.6568317635039636,
+          "outer_rmse": 0.2066420184876953,
+          "outer_mae": 0.1804901325977652,
+          "outer_r2": -3.217693511052693,
+          "outer_n_finite": 5,
+          "outer_n_total": 5
+        }
+      ],
+      "mean_outer_rmse": 0.2066420184876953,
+      "std_outer_rmse": 0.0
+    },
+    {
+      "metal": "Mn",
+      "n_outer_test": 5,
+      "seed_runs": [
+        {
+          "seed_idx": 0,
+          "expression": "sqrt((((d_electron_count / (Z_ratio / cbrt(inv(sqrt(atomic_number_M))))) * (d_electron_count / atomic_radius_M)) * ((-0.21461403 * d_electron_count) + 2.1428115)) + sqrt(2.1428115 * bond_length_MX))",
+          "complexity": 24,
+          "inner_screen_rmse": 0.740458152657424,
+          "outer_rmse": 1.6613223956836716,
+          "outer_mae": 1.4040002633750437,
+          "outer_r2": -3.705619872832738,
+          "outer_n_finite": 5,
+          "outer_n_total": 5
+        }
+      ],
+      "mean_outer_rmse": 1.6613223956836716,
+      "std_outer_rmse": 0.0
+    },
+    {
+      "metal": "Mo",
+      "n_outer_test": 9,
+      "seed_runs": [
+        {
+          "seed_idx": 0,
+          "expression": "cbrt(atomic_radius_X * ((square((d_electron_count / (cube(cube(cube(square(atomic_number_M * 0.03496509)))) + 0.38904655)) + 5.2205443) * 0.092031) / 0.4801846))",
+          "complexity": 21,
+          "inner_screen_rmse": 0.6655619615914975,
+          "outer_rmse": 1.2546040831340464,
+          "outer_mae": 0.8188947574526892,
+          "outer_r2": -0.760500825672805,
+          "outer_n_finite": 9,
+          "outer_n_total": 9
+        }
+      ],
+      "mean_outer_rmse": 1.2546040831340464,
+      "std_outer_rmse": 0.0
+    },
+    {
+      "metal": "Ni",
+      "n_outer_test": 7,
+      "seed_runs": [
+        {
+          "seed_idx": 0,
+          "expression": "1.5219885 + ((d_electron_count / (square(((0.08474748 + d_electron_count) - electronegativity_X) - inv(atomic_radius_X)) + atomic_radius_M)) / sqrt(Z_ratio))",
+          "complexity": 18,
+          "inner_screen_rmse": 0.398802500138694,
+          "outer_rmse": 2.3044166811191196,
+          "outer_mae": 2.0580308166768675,
+          "outer_r2": -3.68613003074869,
+          "outer_n_finite": 7,
+          "outer_n_total": 7
+        }
+      ],
+      "mean_outer_rmse": 2.3044166811191196,
+      "std_outer_rmse": 0.0
+    },
+    {
+      "metal": "Pb",
+      "n_outer_test": 18,
+      "seed_runs": [
+        {
+          "seed_idx": 0,
+          "expression": "cube(exp(inv(sqrt(cube(atomic_radius_M) + square((d_electron_count - 4.6586246) + inv((log(ionization_energy_M) + 5.569836) - d_electron_count)))) / 1.0340838)) - 0.23454219",
+          "complexity": 23,
+          "inner_screen_rmse": 0.687779866103885,
+          "outer_rmse": 0.2077573268472276,
+          "outer_mae": 0.14349955799256325,
+          "outer_r2": -0.1529177751788442,
+          "outer_n_finite": 18,
+          "outer_n_total": 18
+        }
+      ],
+      "mean_outer_rmse": 0.2077573268472276,
+      "std_outer_rmse": 0.0
+    },
+    {
+      "metal": "Pd",
+      "n_outer_test": 5,
+      "seed_runs": [
+        {
+          "seed_idx": 0,
+          "expression": "sqrt((exp(cbrt(28.697456 - atomic_number_M)) * sqrt(d_electron_count)) + bond_length_MX)",
+          "complexity": 11,
+          "inner_screen_rmse": 0.6782865815913626,
+          "outer_rmse": 0.6836902090153549,
+          "outer_mae": 0.3862127540520434,
+          "outer_r2": -0.23460342113451715,
+          "outer_n_finite": 5,
+          "outer_n_total": 5
+        }
+      ],
+      "mean_outer_rmse": 0.6836902090153549,
+      "std_outer_rmse": 0.0
+    },
+    {
+      "metal": "Pt",
+      "n_outer_test": 6,
+      "seed_runs": [
+        {
+          "seed_idx": 0,
+          "expression": "(d_electron_count / (-1.4535764 + inv((9.931408 - d_electron_count) / cube(square(atomic_radius_M))))) + 1.5381577",
+          "complexity": 14,
+          "inner_screen_rmse": 0.5309924060754084,
+          "outer_rmse": 0.33524150305856715,
+          "outer_mae": 0.2841436842611033,
+          "outer_r2": -0.016771879192476247,
+          "outer_n_finite": 6,
+          "outer_n_total": 6
+        }
+      ],
+      "mean_outer_rmse": 0.33524150305856715,
+      "std_outer_rmse": 0.0
+    },
+    {
+      "metal": "Si",
+      "n_outer_test": 5,
+      "seed_runs": [
+        {
+          "seed_idx": 0,
+          "expression": "1.5364122 + (d_electron_count / exp(sqrt(cbrt(cbrt(exp(cbrt(cbrt(exp(cbrt(exp(d_electron_count)))))))) * Z_ratio)))",
+          "complexity": 17,
+          "inner_screen_rmse": 0.8091089731612543,
+          "outer_rmse": 0.29993907682711524,
+          "outer_mae": 0.28535325579647924,
+          "outer_r2": -0.00672086961601015,
+          "outer_n_finite": 5,
+          "outer_n_total": 5
+        }
+      ],
+      "mean_outer_rmse": 0.29993907682711524,
+      "std_outer_rmse": 0.0
+    },
+    {
+      "metal": "Sn",
+      "n_outer_test": 10,
+      "seed_runs": [
+        {
+          "seed_idx": 0,
+          "expression": "(d_electron_count / ((atomic_number_M + (bond_polarity * (exp(d_electron_count) / atomic_number_X))) * (0.03609963 / (electronegativity_M / ((cbrt(monolayer_thickness) * -1.0004447) + (atomic_number_M * 0.22656459)))))) + 1.4672128",
+          "complexity": 25,
+          "inner_screen_rmse": 0.6063143392284336,
+          "outer_rmse": 0.7220027738672851,
+          "outer_mae": 0.5523287666303192,
+          "outer_r2": -0.6433641899798639,
+          "outer_n_finite": 10,
+          "outer_n_total": 10
+        }
+      ],
+      "mean_outer_rmse": 0.7220027738672851,
+      "std_outer_rmse": 0.0
+    },
+    {
+      "metal": "Zr",
+      "n_outer_test": 7,
+      "seed_runs": [
+        {
+          "seed_idx": 0,
+          "expression": "exp(square(inv(atomic_number_M * (exp(cube(electronegativity_diff + (d_electron_count / -0.78113836))) + 0.044650253))) + 0.4568996)",
+          "complexity": 16,
+          "inner_screen_rmse": 0.638013418181752,
+          "outer_rmse": 0.4982196081627009,
+          "outer_mae": 0.42010757358678724,
+          "outer_r2": -2.4525990480909834,
+          "outer_n_finite": 7,
+          "outer_n_total": 7
+        }
+      ],
+      "mean_outer_rmse": 0.4982196081627009,
+      "std_outer_rmse": 0.0
+    }
+  ],
+  "weighted_outer_rmse": 0.686086487292078,
+  "total_outer_N": 130
+}

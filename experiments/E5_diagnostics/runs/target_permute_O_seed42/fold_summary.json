@@ -1,0 +1,73 @@
+{
+  "mode": "target_permute",
+  "outer_anion": "O",
+  "n_seeds": 5,
+  "n_rounds": 3,
+  "n_outer_test": 19,
+  "std_y_global": 0.8560562672026766,
+  "mean_std_y_outer_shuffled": 0.7517796999542674,
+  "mean_outer_rmse_shuffled": 0.8650079922708478,
+  "rmse_over_std_ratio": 1.1506136602564134,
+  "seed_runs": [
+    {
+      "seed_idx": 0,
+      "shuffle_seed": 367190272,
+      "std_y_outer": 0.9808579025194065,
+      "expression": "cbrt(exp(cbrt(bond_polarity - (0.13576472 / (Z_ratio + -2.9399228))) - -1.0821304))",
+      "complexity": 12,
+      "inner_screen_rmse": 0.6123464877527472,
+      "outer_rmse": 1.0431460985232788,
+      "outer_r2": -0.13104031512287428,
+      "outer_n_finite": 19,
+      "outer_n_total": 19
+    },
+    {
+      "seed_idx": 1,
+      "shuffle_seed": 2518802197,
+      "std_y_outer": 1.1132510194056,
+      "expression": "sqrt(exp(cbrt((inv((electron_affinity_X * monolayer_thickness) + -2.724075) / Z_ratio) + cbrt(monolayer_thickness))))",
+      "complexity": 14,
+      "inner_screen_rmse": 0.357552802953743,
+      "outer_rmse": 1.2061674895655572,
+      "outer_r2": -0.17389440878881923,
+      "outer_n_finite": 19,
+      "outer_n_total": 19
+    },
+    {
+      "seed_idx": 2,
+      "shuffle_seed": 3224397000,
+      "std_y_outer": 0.5254645146175636,
+      "expression": "log((bond_length_MX - sqrt(monolayer_thickness)) + (ionization_energy_M - electronegativity_diff))",
+      "complexity": 9,
+      "inner_screen_rmse": 0.9493223324306967,
+      "outer_rmse": 0.7223117129353738,
+      "outer_r2": -0.8895680158253538,
+      "outer_n_finite": 19,
+      "outer_n_total": 19
+    },
+    {
+      "seed_idx": 3,
+      "shuffle_seed": 2149041110,
+      "std_y_outer": 0.804973725319146,
+      "expression": "bond_polarity + 1.6084677",
+      "complexity": 3,
+      "inner_screen_rmse": 0.9458888143078839,
+      "outer_rmse": 0.8432397669176583,
+      "outer_r2": -0.09733378099079326,
+      "outer_n_finite": 19,
+      "outer_n_total": 19
+    },
+    {
+      "seed_idx": 4,
+      "shuffle_seed": 3080805324,
+      "std_y_outer": 0.33435133790962096,
+      "expression": "inv(monolayer_thickness) + 1.629086",
+      "complexity": 4,
+      "inner_screen_rmse": 0.7751584883853752,
+      "outer_rmse": 0.5101748934123707,
+      "outer_r2": -1.328262986853861,
+      "outer_n_finite": 19,
+      "outer_n_total": 19
+    }
+  ]
+}

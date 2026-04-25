@@ -1,0 +1,48 @@
+{
+  "cmdline": [
+    "harness_runner.py",
+    "--experiment",
+    "E5_diagnostics",
+    "--config",
+    "experiments/E5_diagnostics/configs/target_permute.yaml",
+    "--run-seed",
+    "42",
+    "--run-id",
+    "target_permute_O_seed42",
+    "--notes",
+    "E5.3 target-permutation null test on anion=O"
+  ],
+  "config_path": "/Users/ikun/Desktop/Harness-2DTMDs/experiments/E5_diagnostics/configs/target_permute.yaml",
+  "config_sha256": "f3fcb6070e8509286e1a53e1f62bcea24ceebb9c5338b331c925e28bc2145469",
+  "data": {
+    "data/extended/tier2_binary.csv": "cc50715bc68e198debe6b15ed3c6334337e6db5508cb2a825a44dd1d33540108",
+    "data/extended/tier3_binary_plus_ternary.csv": "c593a8309c4d861ed19016e25a2da1c5a204cac7c95770c17c8622f1cc5a99b1"
+  },
+  "data_files": [
+    "data/extended/tier2_binary.csv",
+    "data/extended/tier3_binary_plus_ternary.csv"
+  ],
+  "env_summary": {},
+  "experiment": "E5_diagnostics",
+  "git": {
+    "branch": "main",
+    "commit": "2f3614de46dfa83d9fae0ea1185993a4e3b4d8bd",
+    "dirty": true,
+    "repo": true,
+    "short": "2f3614d"
+  },
+  "notes": "E5.3 target-permutation null test on anion=O",
+  "pkg_versions": {
+    "anthropic": "0.84.0",
+    "numpy": "2.4.2",
+    "pandas": "3.0.0",
+    "pysr": "1.5.10",
+    "sklearn": "1.8.0"
+  },
+  "platform": "macOS-15.3.1-arm64-arm-64bit-Mach-O",
+  "python_version": "3.14.3",
+  "run_id": "target_permute_O_seed42",
+  "run_seed": 42,
+  "timestamp_end": "2026-04-24T16:44:40.468353+00:00",
+  "timestamp_start": "2026-04-24T16:43:14.459214+00:00"
+}

@@ -1,0 +1,177 @@
+{
+  "E5_1_zm_only": {
+    "feature": "atomic_number_M",
+    "feature_short": "Z_M",
+    "n_seeds": 3,
+    "n_rounds": 5,
+    "weighted_outer_rmse": 0.7167131693010642,
+    "per_anion": [
+      {
+        "anion": "O",
+        "n_outer_test": 19,
+        "mean_outer_rmse": 0.8232319911505458,
+        "std_outer_rmse": 0.016097001603748384
+      },
+      {
+        "anion": "S",
+        "n_outer_test": 24,
+        "mean_outer_rmse": 0.3610307564352282,
+        "std_outer_rmse": 0.041586016978601745
+      },
+      {
+        "anion": "Se",
+        "n_outer_test": 30,
+        "mean_outer_rmse": 0.5164958829106937,
+        "std_outer_rmse": 0.028440842084243075
+      },
+      {
+        "anion": "Te",
+        "n_outer_test": 8,
+        "mean_outer_rmse": 0.7765205357233249,
+        "std_outer_rmse": 0.032309267439696476
+      },
+      {
+        "anion": "F",
+        "n_outer_test": 4,
+        "mean_outer_rmse": 1.3232773265256914,
+        "std_outer_rmse": 0.056309277859330105
+      },
+      {
+        "anion": "Cl",
+        "n_outer_test": 27,
+        "mean_outer_rmse": 1.1903069526489833,
+        "std_outer_rmse": 0.0018638421943154087
+      },
+      {
+        "anion": "Br",
+        "n_outer_test": 33,
+        "mean_outer_rmse": 0.70733276075255,
+        "std_outer_rmse": 0.11496896958524466
+      },
+      {
+        "anion": "I",
+        "n_outer_test": 39,
+        "mean_outer_rmse": 0.6770984257704239,
+        "std_outer_rmse": 0.17455846042277035
+      },
+      {
+        "anion": "N",
+        "n_outer_test": 6,
+        "mean_outer_rmse": 0.5028808130373497,
+        "std_outer_rmse": 0.18859777234510514
+      },
+      {
+        "anion": "P",
+        "n_outer_test": 3,
+        "mean_outer_rmse": 0.7049844333206835,
+        "std_outer_rmse": 0.4666003340972198
+      }
+    ]
+  },
+  "E5_2_lomo": {
+    "min_metal_count": 5,
+    "n_metals_evaluated": 18,
+    "weighted_outer_rmse": 0.686086487292078,
+    "total_outer_N": 130,
+    "per_metal": [
+      {
+        "metal": "Ag",
+        "n_outer_test": 6,
+        "mean_outer_rmse": 0.5325889707553179
+      },
+      {
+        "metal": "Al",
+        "n_outer_test": 7,
+        "mean_outer_rmse": 0.4122227830553062
+      },
+      {
+        "metal": "B",
+        "n_outer_test": 7,
+        "mean_outer_rmse": 0.4638338478993349
+      },
+      {
+        "metal": "Bi",
+        "n_outer_test": 9,
+        "mean_outer_rmse": 0.3268450993553026
+      },
+      {
+        "metal": "Cd",
+        "n_outer_test": 8,
+        "mean_outer_rmse": 0.5220547221271553
+      },
+      {
+        "metal": "Cr",
+        "n_outer_test": 6,
+        "mean_outer_rmse": 1.8564213200275073
+      },
+      {
+        "metal": "Ga",
+        "n_outer_test": 5,
+        "mean_outer_rmse": 0.3062134393921383
+      },
+      {
+        "metal": "Hf",
+        "n_outer_test": 5,
+        "mean_outer_rmse": 0.38734128097846976
+      },
+      {
+        "metal": "Hg",
+        "n_outer_test": 5,
+        "mean_outer_rmse": 0.2066420184876953
+      },
+      {
+        "metal": "Mn",
+        "n_outer_test": 5,
+        "mean_outer_rmse": 1.6613223956836716
+      },
+      {
+        "metal": "Mo",
+        "n_outer_test": 9,
+        "mean_outer_rmse": 1.2546040831340464
+      },
+      {
+        "metal": "Ni",
+        "n_outer_test": 7,
+        "mean_outer_rmse": 2.3044166811191196
+      },
+      {
+        "metal": "Pb",
+        "n_outer_test": 18,
+        "mean_outer_rmse": 0.2077573268472276
+      },
+      {
+        "metal": "Pd",
+        "n_outer_test": 5,
+        "mean_outer_rmse": 0.6836902090153549
+      },
+      {
+        "metal": "Pt",
+        "n_outer_test": 6,
+        "mean_outer_rmse": 0.33524150305856715
+      },
+      {
+        "metal": "Si",
+        "n_outer_test": 5,
+        "mean_outer_rmse": 0.29993907682711524
+      },
+      {
+        "metal": "Sn",
+        "n_outer_test": 10,
+        "mean_outer_rmse": 0.7220027738672851
+      },
+      {
+        "metal": "Zr",
+        "n_outer_test": 7,
+        "mean_outer_rmse": 0.4982196081627009
+      }
+    ]
+  },
+  "E5_3_target_permute": {
+    "outer_anion": "O",
+    "n_seeds": 5,
+    "std_y_global": 0.8560562672026766,
+    "mean_std_y_outer_shuffled": 0.7517796999542674,
+    "mean_outer_rmse_shuffled": 0.8650079922708478,
+    "rmse_over_std_ratio": 1.1506136602564134
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "cmdline": [
+    "harness_runner.py",
+    "--experiment",
+    "E5_diagnostics",
+    "--config",
+    "experiments/E5_diagnostics/configs/zm_only.yaml",
+    "--run-seed",
+    "42",
+    "--run-id",
+    "zm_only_seed42",
+    "--notes",
+    "E5.1 Z_M-only PySR diagnostic, all 10 anions, 3 seeds, 5 rounds, per-round timeout=60s"
+  ],
+  "config_path": "/Users/ikun/Desktop/Harness-2DTMDs/experiments/E5_diagnostics/configs/zm_only.yaml",
+  "config_sha256": "911c13b5d113635317beee849c5533b4ef5aa48862197a4eacd8d8901a4b95b7",
+  "data": {
+    "data/extended/tier2_binary.csv": "cc50715bc68e198debe6b15ed3c6334337e6db5508cb2a825a44dd1d33540108",
+    "data/extended/tier3_binary_plus_ternary.csv": "c593a8309c4d861ed19016e25a2da1c5a204cac7c95770c17c8622f1cc5a99b1"
+  },
+  "data_files": [
+    "data/extended/tier2_binary.csv",
+    "data/extended/tier3_binary_plus_ternary.csv"
+  ],
+  "env_summary": {},
+  "experiment": "E5_diagnostics",
+  "git": {
+    "branch": "main",
+    "commit": "2f3614de46dfa83d9fae0ea1185993a4e3b4d8bd",
+    "dirty": true,
+    "repo": true,
+    "short": "2f3614d"
+  },
+  "notes": "E5.1 Z_M-only PySR diagnostic, all 10 anions, 3 seeds, 5 rounds, per-round timeout=60s",
+  "pkg_versions": {
+    "anthropic": "0.84.0",
+    "numpy": "2.4.2",
+    "pandas": "3.0.0",
+    "pysr": "1.5.10",
+    "sklearn": "1.8.0"
+  },
+  "platform": "macOS-15.3.1-arm64-arm-64bit-Mach-O",
+  "python_version": "3.14.3",
+  "run_id": "zm_only_seed42",
+  "run_seed": 42,
+  "timestamp_end": "2026-04-25T02:04:15.443995+00:00",
+  "timestamp_start": "2026-04-25T01:56:10.034418+00:00"
+}

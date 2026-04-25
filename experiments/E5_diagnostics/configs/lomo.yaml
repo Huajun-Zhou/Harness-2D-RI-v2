@@ -1,0 +1,18 @@
+# E5.2 — leave-one-metal-out (LOMO) diagnostic.
+# Vanilla PySR under an outer-LOMO protocol: held-out metal is the test
+# slice, all 20 features. Only metals with N >= min_metal_count are
+# evaluated (metals with N < 5 have too few points to compute a stable
+# per-fold RMSE).
+mode: lomo
+min_metal_count: 5
+n_seeds: 1
+n_rounds: 5
+data_csv: data/extended/tier2_binary.csv
+target: cauchy_A
+stability_range: [0.0, 20.0]
+pysr:
+  niterations: 50
+  populations: 40
+  population_size: 33
+  maxsize: 25
+  parsimony: 0.05

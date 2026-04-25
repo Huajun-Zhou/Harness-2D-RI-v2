@@ -1,0 +1,17 @@
+# E5.3 — target-permutation null test.
+# Shuffle cauchy_A across all samples, re-fit vanilla PySR under outer-LOCO
+# on anion=O (largest non-halogen slice, N=19). If the harness pipeline's
+# RMSE collapses near std(y_outer_shuffled), there is no leakage.
+mode: target_permute
+outer_anion: O
+n_seeds: 5
+n_rounds: 3
+data_csv: data/extended/tier2_binary.csv
+target: cauchy_A
+stability_range: [0.0, 20.0]
+pysr:
+  niterations: 50
+  populations: 40
+  population_size: 33
+  maxsize: 25
+  parsimony: 0.05
