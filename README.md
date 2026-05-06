@@ -34,7 +34,6 @@ Harness-2DTMDs/
 │   └── extended/           Processed feature tables (tier2_binary.csv, tier3_binary_plus_ternary.csv)
 ├── experiments/            v2 campaigns (E1–E5). See experiments/README.md
 ├── legacy_v1/              Read-only archive of the v1 manuscript's artefacts
-├── newpaper/               Manuscript and SI sources (in flight for v2 rewrite)
 ├── scripts/                Reusable dataset / featurisation / baseline utilities
 ├── src/                    Core modules
 │   └── v2/                 v2-specific infra: seed derivation, run manifests

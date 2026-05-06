@@ -39,7 +39,7 @@ plt.rcParams.update({
     'axes.spines.right': False,
 })
 
-OUT = Path('newpaper/figures')
+OUT = Path('figures')
 OUT.mkdir(parents=True, exist_ok=True)
 
 DF = pd.read_csv('data/extended/tier2_binary.csv')

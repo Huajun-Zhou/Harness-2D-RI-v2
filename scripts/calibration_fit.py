@@ -9,7 +9,7 @@ Reports:
   - α point estimate, bootstrap 95% CI, residual std
   - per-TMD calibrated MAPE
   - full Tier-2 distribution after calibration
-  - parity figure  newpaper/figures/fig10_calibration.pdf
+  - parity figure  figures/fig10_calibration.pdf
   - markdown report    results/calibration_report.md
 """
 
@@ -161,7 +161,7 @@ def main():
     print(f"MAPE(surrogate + α)   = {cal['err_calib_%'].mean():.1f}%")
 
     # ---- Figure ---------------------------------------------------------
-    Path('newpaper/figures').mkdir(parents=True, exist_ok=True)
+    Path('figures').mkdir(parents=True, exist_ok=True)
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10.5, 4.5))
 
     lims = (1.0, 6.0)
@@ -197,7 +197,7 @@ def main():
     ax2.grid(alpha=0.3)
 
     plt.tight_layout()
-    out = 'newpaper/figures/fig10_calibration.pdf'
+    out = 'figures/fig10_calibration.pdf'
     plt.savefig(out, bbox_inches='tight')
     plt.savefig(out.replace('.pdf', '.png'), dpi=150, bbox_inches='tight')
     print(f"\nSaved → {out}")
