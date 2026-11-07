@@ -47,6 +47,8 @@ plt.rcParams.update({
 })
 
 REPO   = Path(__file__).resolve().parents[1]
+if str(REPO) not in sys.path:
+    sys.path.insert(0, str(REPO))
 OUT    = REPO / "figures"
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -72,8 +74,8 @@ COLOR = {
 def _save(fig, name: str) -> None:
     pdf = OUT / f"{name}.pdf"
     png = OUT / f"{name}.png"
-    fig.savefig(pdf)
-    fig.savefig(png)
+    fig.savefig(pdf, bbox_inches="tight")
+    fig.savefig(png, dpi=300, bbox_inches="tight")
     print(f"  wrote {pdf.relative_to(REPO)}")
     print(f"  wrote {png.relative_to(REPO)}")
 
@@ -349,49 +351,115 @@ def fig3_outer_loco() -> None:
 def fig4_ablation() -> None:
     print("\n[fig4_ablation]")
     src = (REPO / "experiments" / "E4_ablation_fixed_council"
-           / "runs" / "E4_seed42_3seeds" / "ablation_summary.json")
+           / "runs" / "E4_fullbudget_seed42" / "ablation_summary.json")
     d = json.loads(src.read_text())
-    print(f"  source: {src.relative_to(REPO)}  n_seeds={d['n_seeds']}")
+    n_seeds = int(d["n_seeds"])
+    print(f"  source: {src.relative_to(REPO)}  n_seeds={n_seeds}")
 
-    order = ["FULL", "-AGENTS", "-CAUSAL", "-MEMORY", "-ADAPTIVE"]
+    # Logical ordering: unablated reference (FULL) first, followed by
+    # leave-one-out variants sorted by descending ΔRMSE degradation.
+    order = ["FULL", "-AGENTS", "-ADAPTIVE", "-CAUSAL", "-MEMORY"]
+    ytick_labels = [
+        "FULL (all 4 modules)",
+        "-AGENTS (no AgentCouncil)",
+        "-ADAPTIVE (fixed operators)",
+        "-CAUSAL (no sensitivity critic)",
+        "-MEMORY (no cross-round memory)",
+    ]
     rmse  = [d["summary"][v]["mean_test_rmse"] for v in order]
     rstd  = [d["summary"][v]["std_test_rmse"]  for v in order]
     delta = [d["summary"][v].get("delta_vs_FULL") for v in order]
 
-    for v, r, s, dd in zip(order, rmse, rstd, delta):
-        ds = "ref" if dd is None else f"{dd:+.4f}"
+    # Extract per-seed paired differences Δ_s = RMSE(variant, s) - RMSE(FULL, s)
+    runs_by_var: dict[str, dict[int, float]] = {v: {} for v in order}
+    for r in d.get("all_runs", []):
+        v = r.get("variant")
+        if v in runs_by_var and "test_rmse" in r:
+            runs_by_var[v][int(r["seed_idx"])] = float(r["test_rmse"])
+
+    full_vec = np.array([runs_by_var["FULL"][s] for s in range(n_seeds)])
+    from math import comb
+    sem_deltas = []
+    sd_deltas = []
+    pos_counts = []
+    p_vals = []
+    per_seed_deltas = []
+    for v in order:
+        if v == "FULL":
+            sem_deltas.append(0.0)
+            sd_deltas.append(0.0)
+            pos_counts.append(0)
+            p_vals.append(1.0)
+            per_seed_deltas.append(np.zeros(n_seeds))
+        else:
+            vec = np.array([runs_by_var[v][s] for s in range(n_seeds)])
+            diffs = vec - full_vec
+            per_seed_deltas.append(diffs)
+            sd_d = float(np.std(diffs, ddof=1))
+            sem_d = sd_d / np.sqrt(n_seeds)
+            sd_deltas.append(sd_d)
+            sem_deltas.append(sem_d)
+            n_pos = int(np.sum(diffs > 0))
+            pos_counts.append(n_pos)
+            k = max(n_pos, n_seeds - n_pos)
+            p_2s = min(1.0, 2.0 * sum(comb(n_seeds, j) * (0.5 ** n_seeds) for j in range(k, n_seeds + 1)))
+            p_vals.append(p_2s)
+
+    for v, r, s, dd, sem_d, np_c, pv in zip(order, rmse, rstd, delta, sem_deltas, pos_counts, p_vals):
+        ds = "ref" if dd is None else f"{dd:+.4f}±{sem_d:.4f} (SEM), {np_c}/{n_seeds}>0, p={pv:.4f}"
         print(f"  {v:<10}  RMSE={r:.4f}±{s:.4f}  delta={ds}")
 
-    fig, ax = plt.subplots(figsize=(8.5, 4.0))
+    fig, ax = plt.subplots(figsize=(9.2, 4.2))
 
     x = np.arange(len(order))
     deltas = [delta[i] if delta[i] is not None else 0.0 for i in range(len(order))]
     bar_colors = [COLOR["FULL"] if order[i] == "FULL"
                   else (COLOR["pos"] if deltas[i] > 0 else COLOR["neg"])
                   for i in range(len(order))]
-    ax.barh(x, deltas, color=bar_colors, edgecolor="black", linewidth=0.5)
-    ax.axvline(0, color="black", lw=0.6)
-    pad = 0.004
+
+    ax.barh(x, deltas, color=bar_colors, edgecolor="black", linewidth=0.6, height=0.52, zorder=2)
+    # Plot error bars (±1 SEM of paired ΔRMSE across n=8 seeds) for non-FULL rows
+    for i in range(1, len(order)):
+        ax.errorbar(
+            deltas[i], x[i], xerr=sem_deltas[i],
+            fmt="none", ecolor="#111111", elinewidth=1.4, capsize=4, capthick=1.2, zorder=4
+        )
+
+    # Plot individual seed data points (n = 8) as semi-transparent dots
+    for i in range(1, len(order)):
+        pts = per_seed_deltas[i]
+        ax.scatter(
+            pts, np.full_like(pts, x[i]),
+            color="#222222", edgecolors="white", linewidth=0.7, s=34, alpha=0.85, zorder=5
+        )
+
+    ax.axvline(0, color="black", lw=0.8, zorder=1)
+    pad = 0.005
     for i, dd in enumerate(deltas):
         if order[i] == "FULL":
-            # FULL has Δ = 0 by definition, so its bar has zero length.
-            # Reporting the absolute reference RMSE alongside the "ref"
-            # label makes the otherwise-empty FULL row carry information.
-            ref_label = f"ref  (RMSE = {rmse[i]:.4f})"
-            ax.text(pad, i, ref_label, ha="left", va="center", fontsize=9)
+            ref_label = f"unablated reference  (validation RMSE = {rmse[i]:.4f} ± {rstd[i]:.4f} SD)"
+            ax.text(pad, i, ref_label, ha="left", va="center", fontsize=9.0)
         else:
-            txt = f"{dd:+.4f}"
-            if dd >= 0:
-                ax.text(dd + pad, i, txt, ha="left", va="center", fontsize=9)
-            else:
-                ax.text(dd - pad, i, txt, ha="right", va="center", fontsize=9)
+            txt = f"{dd:+.4f} ± {sem_deltas[i]:.4f}"
+            max_extent = max(dd + sem_deltas[i], float(np.max(per_seed_deltas[i])))
+            anchor = max(max_extent, 0.0) + pad
+            ax.text(anchor, i, txt, ha="left", va="center", fontsize=9.0, fontweight="bold")
+
     ax.set_yticks(x)
-    ax.set_yticklabels(order)
+    ax.set_yticklabels(ytick_labels, fontsize=9.5)
     ax.invert_yaxis()
-    ax.set_xlabel(r"$\Delta$ RMSE vs FULL  (mean of 3 seeds; positive $=$ module is load-bearing)")
-    ax.set_title("Leave-one-module ablation: which governance layers carry the load?")
-    span = max(abs(min(deltas)), abs(max(deltas)))
-    ax.set_xlim(-span * 1.7 - 0.01, span * 1.7 + 0.01)
+    ax.set_xlabel(r"$\Delta$ Validation RMSE relative to FULL  (mean $\pm$ SEM, $n = 8$)", fontsize=10)
+    ax.set_title("Leave-one-module-out ablation", fontsize=11, fontweight="bold", pad=10)
+    ax.set_xlim(-0.042, 0.160)
+
+    from matplotlib.lines import Line2D
+    from matplotlib.patches import Patch
+    legend_elements = [
+        Patch(facecolor=COLOR["pos"], edgecolor="black", label=r"Mean $\Delta\mathrm{RMSE}$"),
+        Line2D([0], [0], color="#111111", lw=1.4, marker="|", markersize=6, label=r"$\pm 1\ \mathrm{SEM}$"),
+        Line2D([0], [0], marker="o", color="none", markerfacecolor="#222222", markeredgecolor="white", markersize=6, label="Individual seeds ($n = 8$)"),
+    ]
+    ax.legend(handles=legend_elements, loc="lower right", frameon=True, fontsize=8.8, framealpha=0.92, edgecolor="#cccccc")
 
     fig.tight_layout()
     _save(fig, "fig4_ablation")

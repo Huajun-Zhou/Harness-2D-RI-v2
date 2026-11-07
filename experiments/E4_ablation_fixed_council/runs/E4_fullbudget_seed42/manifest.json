@@ -1,0 +1,46 @@
+{
+  "cmdline": [
+    "harness_runner.py",
+    "--experiment",
+    "E4_ablation_fixed_council",
+    "--config",
+    "experiments/E4_ablation_fixed_council/configs/E4_fullbudget_test1seed.yaml",
+    "--run-seed",
+    "42",
+    "--run-id",
+    "E4_fullbudget_seed42",
+    "--notes",
+    "Revision E4 full budget (10 rounds x 100 iter) seed test"
+  ],
+  "config_path": "/Volumes/RickBox/harness-2D/Harness-2DTMDs/experiments/E4_ablation_fixed_council/configs/E4_fullbudget_test1seed.yaml",
+  "config_sha256": "3624e7c580da2d7889b6bed5affc923316dbe4396824a09c65326a5745a2143b",
+  "data": {
+    "data/extended/tier2_binary.csv": "cc50715bc68e198debe6b15ed3c6334337e6db5508cb2a825a44dd1d33540108"
+  },
+  "data_files": [
+    "data/extended/tier2_binary.csv"
+  ],
+  "env_summary": {},
+  "experiment": "E4_ablation_fixed_council",
+  "git": {
+    "branch": "main",
+    "commit": "38a08231f6497df913aaab8be017c956e63df523",
+    "dirty": true,
+    "repo": true,
+    "short": "38a0823"
+  },
+  "notes": "Revision E4 full budget (10 rounds x 100 iter) seed test",
+  "pkg_versions": {
+    "anthropic": "2.4.0",
+    "numpy": "2.3.2",
+    "pandas": "2.3.2",
+    "pysr": "1.5.10",
+    "sklearn": "1.7.1"
+  },
+  "platform": "macOS-15.3.2-arm64-arm-64bit",
+  "python_version": "3.12.3",
+  "run_id": "E4_fullbudget_seed42",
+  "run_seed": 42,
+  "timestamp_end": "2026-11-03T09:27:16.452782+00:00",
+  "timestamp_start": "2026-11-03T07:50:11.158846+00:00"
+}

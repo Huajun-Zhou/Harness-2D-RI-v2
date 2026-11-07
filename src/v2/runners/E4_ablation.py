@@ -50,7 +50,7 @@ VARIANT_TO_DISABLE = {
 
 
 def _install_file_log(run_dir: Path) -> logging.Handler:
-    fh = logging.FileHandler(run_dir / "e4_run.log", mode="w")
+    fh = logging.FileHandler(run_dir / "e4_run.log", mode="a")
     fh.setLevel(logging.INFO)
     fh.setFormatter(logging.Formatter(
         "%(asctime)s [%(levelname)s] %(name)s: %(message)s"
@@ -198,13 +198,67 @@ def run(config_path: Path, run_seed: int, run_dir: Path) -> dict[str, Any]:
              len(variants), n_seeds, len(variants) * n_seeds)
 
     all_runs: list[dict] = []
-    for variant in variants:
-        for seed_idx in range(n_seeds):
+    summary_path = run_dir / "ablation_summary.json"
+    done_keys: set[tuple[str, int]] = set()
+    if summary_path.is_file():
+        try:
+            prev = json.loads(summary_path.read_text())
+            for r in prev.get("all_runs", []):
+                if "test_rmse" in r and not np.isnan(r["test_rmse"]):
+                    all_runs.append(r)
+                    done_keys.add((r["variant"], int(r["seed_idx"])))
+            if done_keys:
+                log.info("Resuming E4: loaded %d completed runs from %s",
+                         len(done_keys), summary_path)
+        except Exception as e:
+            log.warning("Could not load existing summary (%s); starting fresh", e)
+
+    def _write_checkpoint() -> dict[str, Any]:
+        summary: dict[str, Any] = {}
+        for v in variants:
+            v_runs = [r for r in all_runs if r.get("variant") == v and "test_rmse" in r]
+            test_rmses = [r["test_rmse"] for r in v_runs]
+            cplxs = [r["complexity"] for r in v_runs if r.get("complexity") is not None]
+            def _ms(xs):
+                if not xs: return (float("nan"), float("nan"))
+                a = np.asarray(xs, dtype=float)
+                return float(a.mean()), float(a.std(ddof=1)) if len(a) > 1 else 0.0
+            m_t, s_t = _ms(test_rmses)
+            m_c, s_c = _ms(cplxs)
+            summary[v] = {
+                "n_seeds_success": len(v_runs),
+                "mean_test_rmse": m_t, "std_test_rmse": s_t,
+                "mean_complexity": m_c, "std_complexity": s_c,
+            }
+        full = summary.get("FULL")
+        if full and not np.isnan(full["mean_test_rmse"]):
+            for v in variants:
+                if v == "FULL":
+                    continue
+                if "mean_test_rmse" in summary[v]:
+                    summary[v]["delta_vs_FULL"] = (
+                        summary[v]["mean_test_rmse"] - full["mean_test_rmse"]
+                    )
+        out = {
+            "run_seed": run_seed,
+            "n_seeds": n_seeds,
+            "all_runs": all_runs,
+            "summary": summary,
+        }
+        summary_path.write_text(json.dumps(out, indent=2))
+        return out
+
+    for seed_idx in range(n_seeds):
+        for variant in variants:
+            if (variant, seed_idx) in done_keys:
+                log.info("    skip completed variant=%s seed=%d", variant, seed_idx)
+                continue
             t0 = time.time()
             try:
                 row = _single_run(variant, seed_idx, run_seed, run_dir, cfg)
                 row["wall_seconds"] = time.time() - t0
                 all_runs.append(row)
+                _write_checkpoint()
                 log.info("    done variant=%s seed=%d  "
                          "cplx=%s test=%.4f  (+%.1fs)",
                          variant, seed_idx, row["complexity"],
@@ -215,43 +269,10 @@ def run(config_path: Path, run_seed: int, run_dir: Path) -> dict[str, Any]:
                     "variant": variant, "seed_idx": seed_idx,
                     "error": str(e),
                 })
+                _write_checkpoint()
 
-    # Aggregate per-variant
-    summary: dict[str, Any] = {}
-    for v in variants:
-        v_runs = [r for r in all_runs if r["variant"] == v and "test_rmse" in r]
-        test_rmses = [r["test_rmse"] for r in v_runs]
-        cplxs = [r["complexity"] for r in v_runs if r["complexity"] is not None]
-        def _ms(xs):
-            if not xs: return (float("nan"), float("nan"))
-            a = np.asarray(xs, dtype=float)
-            return float(a.mean()), float(a.std(ddof=1)) if len(a) > 1 else 0.0
-        m_t, s_t = _ms(test_rmses)
-        m_c, s_c = _ms(cplxs)
-        summary[v] = {
-            "n_seeds_success": len(v_runs),
-            "mean_test_rmse": m_t, "std_test_rmse": s_t,
-            "mean_complexity": m_c, "std_complexity": s_c,
-        }
-
-    # Δ vs FULL
-    full = summary.get("FULL")
-    if full and not np.isnan(full["mean_test_rmse"]):
-        for v in variants:
-            if v == "FULL":
-                continue
-            if "mean_test_rmse" in summary[v]:
-                summary[v]["delta_vs_FULL"] = (
-                    summary[v]["mean_test_rmse"] - full["mean_test_rmse"]
-                )
-
-    output = {
-        "run_seed": run_seed,
-        "n_seeds": n_seeds,
-        "all_runs": all_runs,
-        "summary": summary,
-    }
-    (run_dir / "ablation_summary.json").write_text(json.dumps(output, indent=2))
+    output = _write_checkpoint()
+    summary = output["summary"]
 
     log.info("")
     log.info("E4 ablation summary (held-out-slice RMSE):")

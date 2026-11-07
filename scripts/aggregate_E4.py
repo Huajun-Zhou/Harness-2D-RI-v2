@@ -21,11 +21,11 @@ from pathlib import Path
 
 
 DEFAULT_SUMMARY = Path(
-    "experiments/E4_ablation_fixed_council/runs/E4_seed42_3seeds/ablation_summary.json"
+    "experiments/E4_ablation_fixed_council/runs/E4_fullbudget_seed42/ablation_summary.json"
 )
 
-# Variant display order — keep FULL first as the reference row.
-VARIANT_ORDER = ("FULL", "-AGENTS", "-CAUSAL", "-ADAPTIVE", "-MEMORY")
+# Variant display order — keep FULL first as the reference row, followed by ablations ordered by ΔRMSE.
+VARIANT_ORDER = ("FULL", "-AGENTS", "-ADAPTIVE", "-CAUSAL", "-MEMORY")
 
 
 def _fmt_delta(d: float | None) -> str:
@@ -83,7 +83,7 @@ def _write_md(rows: list[dict], out: Path, n_seeds: int) -> None:
     lines.append("# E4 — Governance ablation")
     lines.append("")
     lines.append(
-        f"5 variants × {n_seeds} seeds. Budget: 5 rounds × 50 iter × 40 islands. "
+        f"5 variants × {n_seeds} seeds. Budget: 10 rounds × 100 iter × 40 islands. "
         "LLM driver: Qwen-max (DashScope). Target: held-out-slice RMSE."
     )
     lines.append("")

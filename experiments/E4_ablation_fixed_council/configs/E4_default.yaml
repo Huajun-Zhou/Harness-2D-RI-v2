@@ -1,17 +1,17 @@
 # E4 — Leave-one-module-out ablation on the fixed 4-agent council.
 #
 # Reruns v1's A5 ablation on the DataAgent-fixed pipeline (see Phase 1.3).
-# Five variants × 3 seeds = 15 runs at reduced budget (5 rounds × 50 iter
-# per round) → ~10 minutes total.
+# Five variants × 8 seeds = 40 runs at the full matched budget (10 rounds × 100 iter
+# per round, 40 islands).
 #
 # Consumed by src/v2/runners/E4_ablation.py.
 
 # ----- E4-specific -----
 target: cauchy_A
 data_csv: data/extended/tier2_binary.csv
-n_seeds: 3
-n_rounds: 5          # per-variant PySR rounds (reduced from E1's 10)
-niterations: 50      # per-round PySR iterations (reduced from E1's 100)
+n_seeds: 8
+n_rounds: 10         # per-variant PySR rounds (matched to E1/E2)
+niterations: 100     # per-round PySR iterations (matched to E1/E2)
 
 # ----- standard harness keys -----
 project:
@@ -75,7 +75,7 @@ llm_sr:
   pysr:
     populations: 40
     population_size: 33
-    niterations: 50        # will be overridden per runner logic
+    niterations: 100       # will be overridden per runner logic
     binary_operators: ["+", "-", "*", "/"]
     unary_operators: ["exp", "log", "sqrt", "square", "inv"]
     maxsize: 25
@@ -85,7 +85,7 @@ llm_sr:
       log: {exp: 0, log: 0}
       sqrt: {sqrt: 0}
   search:
-    max_rounds: 5
+    max_rounds: 10
     max_formulas_per_round: 200
     convergence_threshold: 0.01
     experience_pool_size: 50
